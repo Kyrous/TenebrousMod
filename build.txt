@@ -1,0 +1,6 @@
+displayName = Tenebrous Mod
+author = Reapermen and the Dev Team
+version = 0.1.0.1
+hideCode = true
+hideResources = true
+includeSource = false

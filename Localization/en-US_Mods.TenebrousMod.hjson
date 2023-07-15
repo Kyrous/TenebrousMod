@@ -1,0 +1,102 @@
+Configs: {
+	Config: {
+		BossHealthMultiplier: {
+			Tooltip: Multiply the bosses health!
+			Label: Boss Health Multiplier
+		}
+
+		SupremacyMode: {
+			Tooltip: A whole nother difficulty for experts!
+			Label: Supremacy Mode
+		}
+
+		Headers: {
+			Items: Items Header
+			GeneralGameplay: General Gameplay
+		}
+
+		DisplayName: Config
+	}
+}
+
+Items: {
+	StarterBag: {
+		Tooltip: The start of the Gloomy Journey!
+		DisplayName: Starter Bag
+	}
+
+	Meat: {
+		DisplayName: Meat
+		Tooltip: ""
+	}
+
+	PhotonBlade: {
+		DisplayName: Photon Blade
+		Tooltip: Charged with lightning.
+	}
+
+	WallOfFleshDefeat: {
+		DisplayName: Soul of Hatred
+		Tooltip:
+			'''
+			Sinorus, a man more than a billion years old.
+			They have one goal, and that goal is to take over the universe.
+			He only sees you as a roadblock, until one day, you become a threat.
+			'''
+	}
+
+	ObscurumBar: {
+		DisplayName: Obscurum Bar
+		Tooltip: ""
+	}
+
+	TheGreatTerraria: {
+		DisplayName: The Great Terraria
+		Tooltip: The sword that Terrains the World, what you call, Terraria!
+	}
+
+	Trisma: {
+		DisplayName: Trisma
+		Tooltip: ""
+	}
+
+	TheGreatGranite: {
+		DisplayName: The Great Granite
+		Tooltip: ""
+	}
+
+	PelagicVeldItem: {
+		DisplayName: Pelagic Veld
+		Tooltip: ""
+	}
+}
+
+Projectiles: {
+	PhotonicSerpent.DisplayName: Photonic Serpent
+	SporeBomb.DisplayName: Spore Bomb
+	DeathLaser.DisplayName: Death Laser
+}
+
+NPCs: {
+	Zrym.DisplayName: Zrym Rover
+	ZrymRover.DisplayName: Zrym Rover
+	SporeScreecherBody.DisplayName: Spore Screecher Body
+	SporeScreecherHead.DisplayName: Spore Screecher Head
+	SporeScreecherTail.DisplayName: Spore Screecher Tail
+	DarkFlow.DisplayName: Dark Flow
+	PelagicEelBody.DisplayName: Pelagic Eel Body
+	PelagicEelHead.DisplayName: Pelagic Eel Head
+	PelagicEelTail.DisplayName: Pelagic Eel Tail
+}
+
+Biomes: {
+	NightmareBiome: {
+		DisplayName: Nightmare Biome
+		TownNPCDialogueName: the Nightmare Biome
+	}
+
+	PelagicSea: {
+		DisplayName: Pelagic Sea
+		TownNPCDialogueName: the Pelagic Sea
+	}
+}
