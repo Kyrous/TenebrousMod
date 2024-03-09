@@ -1,1 +1,38 @@
-Tenebrous Mod is a pretty cool mod, it does...this. Modify this file with a description of your mod.
+Credits in the Mod Discord:
+https://discord.gg/xZ6AU89Ztx
+
+This Mod is on beta and is not fully yet done. (There are some placeholder stuff like sprites and ai)
+On version v0.6... We should all expect it to be ready for playthroughs.
+Also bugs and suggestions would be really helpful!
+
+Tenebrous Mod is a spaced themed mod that adds more combat, more bosses, more buffs, more accessories, more armor, more weapons, and makes Terraria harder.
+This Mod has had some early versions -- Which were very terrible -- that are in 1.3, but this is the real version.
+
+Tenebrous Mod's world named Sagani was a perfect place with no doubts or bad judgements. 
+Everything was perfect till Sinorus's jealousy got out of hand.
+Keep in mind, Sinorus is Virlina's brother.
+Virlina is one who keeps everything good and spreads peace around Sagani.
+Virlina wasn't nearly as harsh as her brother Sinorus who had some mental issues.
+Sinorus has a short temper and a huge ego one that can result in deadly results.
+Sinorus thinks Virlina is not fit for a king nor queen because of her kind and soft personality.
+Sinorus then wants to have ownership to all the enemies and make them his slaves.
+The enemies said no and which resulted them to be tortured, terrorized, and enslaved.
+They are now forced to destroy the player and to end peaceness forever for his great self centered being.
+Then the corruption/crimson are made for spreading evil around the world.
+Virlina can't do this all alone and will need help on this.
+This is where you will come in and stop Sinorus's tyranny.
+
+There will be more content added for the story later on in the mod... Not all the lore will be publically released at first.
+
+Content:
+2 Boss(s)
+0 Enemie(s)
+1 Critter(s)
+3 Buff(s)
+8 Tile(s)
+58 item(s)
+
+Localization:
+English
+
+I plan on adding Portuguese later on.

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Terraria.DataStructures;
+﻿using Terraria.DataStructures;
 using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
@@ -28,6 +23,9 @@ namespace TenebrousMod.Items.Bars
         {
             Item.width = 34;
             Item.height = 40;
+            Item.rare = ItemRarityID.LightPurple;
+            Item.value = Item.sellPrice(silver: 80);
+            Item.maxStack = 9999;
         }
         public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
         {

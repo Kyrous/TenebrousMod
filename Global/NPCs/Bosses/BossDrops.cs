@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TenebrousMod.Items.Food;
-using TenebrousMod.Items.Spirit;
-using TenebrousMod.Items.Weapons.Melee;
+﻿using TenebrousMod.Items.Weapons.Melee;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
@@ -19,8 +12,15 @@ namespace TenebrousMod.Global.NPCs.Bosses
         {
             if (npc.type == NPCID.WallofFlesh)
             {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<WallOfFleshDefeat>(), 1, 1, 1));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<PhotonBlade>(), 2, 1, 1));
+            }
+            if (npc.type == NPCID.SkeletronHead)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<BoneBlade>(), 2, 1, 1));
+            }
+            if (npc.type == NPCID.EyeofCthulhu)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Eyesore>(), 2, 1, 1));
             }
 
             base.ModifyNPCLoot(npc, npcLoot);

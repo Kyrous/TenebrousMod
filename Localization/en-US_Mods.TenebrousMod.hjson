@@ -1,10 +1,5 @@
 Configs: {
 	Config: {
-		BossHealthMultiplier: {
-			Tooltip: Multiply the bosses health!
-			Label: Boss Health Multiplier
-		}
-
 		SupremacyMode: {
 			Tooltip: A whole nother difficulty for experts!
 			Label: Supremacy Mode
@@ -32,27 +27,12 @@ Items: {
 
 	PhotonBlade: {
 		DisplayName: Photon Blade
-		Tooltip: Charged with lightning.
-	}
-
-	WallOfFleshDefeat: {
-		DisplayName: Soul of Hatred
-		Tooltip:
-			'''
-			Sinorus, a man more than a billion years old.
-			They have one goal, and that goal is to take over the universe.
-			He only sees you as a roadblock, until one day, you become a threat.
-			'''
+		Tooltip: Charged with lightning. If the Lightning stikes the enemy, you get an aura of spikes around you.
 	}
 
 	ObscurumBar: {
 		DisplayName: Obscurum Bar
-		Tooltip: ""
-	}
-
-	TheGreatTerraria: {
-		DisplayName: The Great Terraria
-		Tooltip: The sword that Terrains the World, what you call, Terraria!
+		Tooltip: The needed material to make Obscurum and Ember gear
 	}
 
 	Trisma: {
@@ -65,38 +45,352 @@ Items: {
 		Tooltip: ""
 	}
 
-	PelagicVeldItem: {
-		DisplayName: Pelagic Veld
+	GraniteAxe: {
+		DisplayName: Granite Axe
+		Tooltip: ""
+	}
+
+	GraniteHammer: {
+		DisplayName: Granite Hammer
+		Tooltip: ""
+	}
+
+	GranitePickaxe: {
+		DisplayName: Granite Pickaxe
+		Tooltip: ""
+	}
+
+	GraniteBlade: {
+		DisplayName: Granite Blade
+		Tooltip: ""
+	}
+
+	GraniteWhip: {
+		DisplayName: Granite Whip
+		Tooltip: ""
+	}
+
+	GraniteCore: {
+		DisplayName: Granite Core
+		Tooltip: ""
+	}
+
+	GraniteBlaster: {
+		DisplayName: Granite Blaster
+		Tooltip: ""
+	}
+
+	GraniteShard: {
+		DisplayName: Granite Shard
+		Tooltip: The needed material to make Granite gear
+	}
+
+	GraniteStaff: {
+		DisplayName: Granite Staff
+		Tooltip: Shoots Granite Orbs.
+	}
+
+	ObsidianShell: {
+		DisplayName: Obsidian Shell
+		Tooltip: Increases life regen and defense on half health
+	}
+
+	GraniteEmblem: {
+		DisplayName: Granite Emblem
+		Tooltip: ""
+	}
+
+	EmberScythe: {
+		DisplayName: Ember Scythe
+		Tooltip: Shoots Homing Ember Flames
+	}
+
+	EmberBlade: {
+		DisplayName: Ember Blade
+		Tooltip: Shoots an Ember Flame
+	}
+
+	GraniteBow: {
+		DisplayName: Granite Bow
+		Tooltip: Turns wood arrows into granite arrows
+	}
+
+	Riptide: {
+		DisplayName: Riptide
+		Tooltip: ""
+	}
+
+	TheGreatEmber: {
+		DisplayName: The Great Ember
+		Tooltip: Charge up the sword by swinging it and then when you stop swinging it. it releases Homing Ember Flames
+	}
+
+	EtherealVitalityCore: {
+		Tooltip:
+			'''
+			Defense increased by 4 and Melee Damage increased by 5% while in the Granite Biome
+			All Damage increased by 10%
+			'''
+		DisplayName: Ethereal Vitality Core
+	}
+
+	EtherealEmblem: {
+		Tooltip: All damage increased by 5%
+		DisplayName: Ethereal Emblem
+	}
+
+	BoneBlade: {
+		DisplayName: Bone Blade
+		Tooltip: Drops from Skeletron
+	}
+
+	Eyesore: {
+		DisplayName: Eyesore
+		Tooltip: Drops from EOC
+	}
+
+	RiptideBow: {
+		DisplayName: Riptide Bow
+		Tooltip: Turns any wooden arrows into a water arrow.
+	}
+
+	EmberWarAxe: {
+		DisplayName: Ember Waraxe
+		Tooltip: ""
+	}
+
+	EmberArrow: {
+		DisplayName: Ember Arrow
+		Tooltip: Inflicts a fire burn to any enemy it hits.
+	}
+
+	EmberBow: {
+		DisplayName: Ember Bow
+		Tooltip: Turns all arrow types into flame arrows
+	}
+
+	ObscurumGlove: {
+		Tooltip:
+			'''
+			All damage increased by 7% and Defense decreased by 4
+			While on 25% of your health, your defense goes up by 8 and your damage goes up by 10%
+			10% increased critical strike chance
+			'''
+		DisplayName: Obscurum Glove
+	}
+
+	ObscurumPlate: {
+		DisplayName: Obscurum Plate
+		Tooltip:
+			'''
+			Critical Strike Chance increased by 8%
+			Gives Immunity to lava or any form of fire
+			Gives you the Inferno buff when on 25% Health
+			'''
+	}
+
+	ObscurumHelmetMelee: {
+		SetBonus: Mods.TenebrousMod.Items.ObscurumHelmetMelee.SetBonus
+		DisplayName: Obscurum Helmet
+		Tooltip: Increases Melee Damage by 5%
+	}
+
+	ObscurumHoodMage: {
+		SetBonus: Mods.TenebrousMod.Items.ObscurumHoodMage.SetBonus
+		DisplayName: Obscurum Hood
+		Tooltip: Increases Magic Damage by 5%
+	}
+
+	ObscurumMaskSummoner: {
+		SetBonus: Mods.TenebrousMod.Items.ObscurumMaskSummoner.SetBonus
+		DisplayName: Obscurum Mask
+		Tooltip: Increases Summoner Damage by 5%
+	}
+
+	ObscurumHeadgearRanger: {
+		SetBonus: Mods.TenebrousMod.Items.ObscurumHeadgearRanger.SetBonus
+		DisplayName: Obscurum Headgear
+		Tooltip: Increases Ranged Damage by 5%
+	}
+
+	ObscurumGreaves: {
+		DisplayName: Obscurum Greaves
+		Tooltip:
+			'''
+			Increases movement by 10%
+			Allows movement over water and lava
+			'''
+	}
+
+	EmberwingTreasureBag: {
+		DisplayName: Emberwing Treasure Bag
+		Tooltip: ""
+	}
+
+	ObscurumWings: {
+		DisplayName: Obscurum Wings
+		Tooltip: ""
+	}
+
+	RiptideStaff: {
+		DisplayName: Riptide Staff
+		Tooltip: Summons a mini Riptide Ravager to help fight for you
+	}
+
+	EmberPact: {
+		Tooltip:
+			'''
+			Summons Emberwing
+			Can only be used when you have defeated plantera and when you are in the underworld
+			'''
+		DisplayName: Ember Pact
+	}
+
+	MainMenuThemeMusicBox: {
+		Tooltip: ""
+		DisplayName: Main Menu Theme Music Box
+	}
+
+	ShimmerButterflyItem: {
+		DisplayName: Shimmer Butterfly
+		Tooltip: ""
+	}
+
+	WarCrate: {
+		DisplayName: War Crate
+		Tooltip: ""
+	}
+
+	RavagedHeart: {
+		DisplayName: Ravaged Heart
+		Tooltip:
+			'''
+			Increases Health by 100
+			Can only be used at max health and only once
+			'''
+	}
+
+	HydroArrow: {
+		DisplayName: Hydro Arrow
+		Tooltip: ""
+	}
+
+	HydroFury: {
+		DisplayName: Hydro Fury
+		Tooltip: ""
+	}
+
+	AncientStaff: {
+		DisplayName: Ancient Staff
+		Tooltip: Shoots powerful Cursed Flames
+	}
+
+	Ragnarok: {
+		DisplayName: Ragnarok
+		Tooltip: ""
+	}
+
+	Bloodlust: {
+		DisplayName: Bloodlust
+		Tooltip: Shoots powerful Inferno Flames
+	}
+
+	StaffOfTheStones: {
+		DisplayName: Staff Of The Stones
+		Tooltip: Summons a stone to help you
+	}
+
+	IceScepter: {
+		DisplayName: Ice Scepter
+		Tooltip: ""
+	}
+
+	EtherealStoneItem: {
+		DisplayName: Ethereal Stone
+		Tooltip: ""
+	}
+
+	EmberwingTrophyI: {
+		DisplayName: Emberwing Trophy
+		Tooltip: ""
+	}
+
+	EmberwingRelicI: {
+		DisplayName: Emberwing Relic
+		Tooltip: ""
+	}
+
+	RiptideRavagerRelicI: {
+		DisplayName: Riptide Ravager Relic
+		Tooltip: ""
+	}
+
+	RiptideRavagerTrophyI: {
+		DisplayName: Riptide Ravager Trophy
+		Tooltip: ""
+	}
+
+	MainMenuThemeDayMusicBox: {
+		DisplayName: Main Menu Theme Day Music Box
+		Tooltip: ""
+	}
+
+	MainMenuThemeNightMusicBox: {
+		DisplayName: Main Menu Theme Night Music Box
+		Tooltip: ""
+	}
+
+	RiptideRavagerTreasureBag: {
+		DisplayName: Riptide Ravager Treasure Bag
 		Tooltip: ""
 	}
 }
 
 Projectiles: {
 	PhotonicSerpent.DisplayName: Photonic Serpent
-	SporeBomb.DisplayName: Spore Bomb
 	DeathLaser.DisplayName: Death Laser
+	GraniteWhipProj.DisplayName: Granite Whip
+	GraniteCoreProj.DisplayName: Granite Core
+	GraniteOrbProj.DisplayName: Granite Orb
+	EmberBall.DisplayName: Ember Ball
+	WaterGun2hell.DisplayName: Water
+	EmberArrowProj.DisplayName: Ember Arrow
+	EmberFlame.DisplayName: Ember Flame
+	RiptideStaffProj.DisplayName: Riptide Staff
+	RiptideStaffProj2.DisplayName: Riptide Staff
+	EmberBallFriendly.DisplayName: Ember Ball
+	BoneBladeProj.DisplayName: Bone Blade
+	HydroArrowProj.DisplayName: Hydro Arrow
+	HydroArrowProj2.DisplayName: Hydro Arrow
+	StoneProj.DisplayName: Stone
+	WaterArrow.DisplayName: Water Arrow
 }
 
 NPCs: {
-	Zrym.DisplayName: Zrym Rover
-	ZrymRover.DisplayName: Zrym Rover
-	SporeScreecherBody.DisplayName: Spore Screecher Body
-	SporeScreecherHead.DisplayName: Spore Screecher Head
-	SporeScreecherTail.DisplayName: Spore Screecher Tail
-	DarkFlow.DisplayName: Dark Flow
-	PelagicEelBody.DisplayName: Pelagic Eel Body
-	PelagicEelHead.DisplayName: Pelagic Eel Head
-	PelagicEelTail.DisplayName: Pelagic Eel Tail
+	Emberwing.DisplayName: Emberwing
+	RiptideRavager.DisplayName: Riptide Ravager
+	ShimmerButterfly.DisplayName: Shimmer Butterfly
 }
 
-Biomes: {
-	NightmareBiome: {
-		DisplayName: Nightmare Biome
-		TownNPCDialogueName: the Nightmare Biome
+Buffs: {
+	Infuriated: {
+		DisplayName: Infuriated
+		Description: Defense decreased by 10% and Damage increased by 10%.
 	}
 
-	PelagicSea: {
-		DisplayName: Pelagic Sea
-		TownNPCDialogueName: the Pelagic Sea
+	Empowered: {
+		DisplayName: Empowered
+		Description: Defense increased by 5 and Damage increased by 10%
 	}
+
+	InternalImploding: {
+		DisplayName: Internal Imploding
+		Description: Damage and Defense decreased by 20%
+	}
+}
+
+Tiles: {
+	MainMenuThemeMusicBoxTile.MapEntry: Main Menu Theme Music Box
+	MainMenuThemeDayMusicBoxTile.MapEntry: Main Menu Theme Day Music Box Tile
+	MainMenuThemeNightMusicBoxTile.MapEntry: Main Menu Theme Night Music Box Tile
 }

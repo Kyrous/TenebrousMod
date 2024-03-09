@@ -1,15 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.GameContent;
-using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -29,11 +23,11 @@ namespace TenebrousMod.Items.Weapons.Melee
         public override void SetDefaults()
         {
             Item.damage = 60;
-            Item.rare = ItemRarityID.Pink;
+            Item.rare = ItemRarityID.LightPurple;
             Item.DamageType = DamageClass.Melee;
             Item.useTime = 25;
             Item.useAnimation = 25;
-            Item.useStyle = 1;
+            Item.useStyle = ItemUseStyleID.Swing;
             Item.width = 50;
             Item.height = 46;
             Item.knockBack = 2;
@@ -41,7 +35,8 @@ namespace TenebrousMod.Items.Weapons.Melee
             Item.shoot = ModContent.ProjectileType<PhotonicSerpent>();
             Item.shootSpeed = 9f;
             Item.autoReuse = true;
-            
+            Item.value = Item.sellPrice(gold: 3);
+
         }
         public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
         {
@@ -124,6 +119,12 @@ namespace TenebrousMod.Items.Weapons.Melee
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             SoundEngine.PlaySound(SoundID.Thunder);
+            Player player = Main.player[Projectile.owner];
+            Vector2 direction = (player.Center - target.Center).SafeNormalize(Vector2.UnitX);
+            direction = direction.RotatedByRandom(MathHelper.ToRadians(10));
+            int projectile = Projectile.NewProjectile(player.GetSource_FromThis(), player.Center, direction * 10, ProjectileID.CultistBossIceMist, 15, 1, Main.myPlayer);
+            Main.projectile[projectile].friendly = true;
+            Main.projectile[projectile].hostile = false;
             base.OnHitNPC(target, hit, damageDone);
         }
         public override void AI()

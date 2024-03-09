@@ -14,13 +14,20 @@
     <None Remove="NPCs - Copy\**" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Items\Placeable\WarCrateTile.png" />
+    <None Remove="NPCs\Bosses\Emberwing\EmberBall.png" />
+    <None Remove="NPCs\Bosses\Emberwing\EmberBallFriendly.png" />
+    <None Remove="Projectiles\EmberFlame.png" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Backgrounds\" />
+    <Folder Include="Biomes\" />
     <Folder Include="Global\NPCs\Town\" />
-    <Folder Include="Items\Tools\" />
-    <Folder Include="NPCs\Bosses\GraniteGoliath\" />
-    <Folder Include="NPCs\Town\" />
+    <Folder Include="Items\Mounts\" />
     <Folder Include="Tiles\" />
+    <Folder Include="WorldGen\" />
   </ItemGroup>
 </Project>
