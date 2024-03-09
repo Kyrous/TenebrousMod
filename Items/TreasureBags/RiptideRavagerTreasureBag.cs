@@ -15,7 +15,7 @@ using Terraria.ModLoader;
 namespace TenebrousMod.Items.TreasureBags
 {
     public class RiptideRavagerTreasureBag : ModItem
-    { 
+    {
         public override void SetDefaults()
         {
             Item.width = 38;
@@ -36,19 +36,16 @@ namespace TenebrousMod.Items.TreasureBags
             itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<RiptideStaff>(), 1));
             itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<RiptideRavagerTrophyI>(), 10));
             itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<Riptide>(), 1, 1, 1));
-            if (Main.masterMode)
-                itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<RiptideRavagerRelicI>(), 1));
-            base.ModifyItemLoot(itemLoot);
+            itemLoot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<RiptideRavagerRelicI>()));
         }
-        WeaponLighting weaponLighting = new WeaponLighting();
 
         public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
         {
-            return weaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);
+            return WeaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);
         }
         public override void PostUpdate()
         {
-            weaponLighting.PostLighting(Item, 1);
+            WeaponLighting.PostLighting(Item, 1);
         }
     }
 }

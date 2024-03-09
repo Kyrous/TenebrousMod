@@ -12,7 +12,6 @@ namespace TenebrousMod.Items.Summons
     {
         public override void SetStaticDefaults()
         {
-
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
             ItemID.Sets.SortingPriorityBossSpawns[Type] = 12;
         }

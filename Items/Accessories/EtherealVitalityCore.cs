@@ -24,7 +24,6 @@ namespace TenebrousMod.Items.Accessories
                 player.GetDamage<GenericDamageClass>() *= 1.05f;
                 player.statDefense += 4;
             }
-            base.UpdateAccessory(player, hideVisual);
         }
         public override void AddRecipes()
         {

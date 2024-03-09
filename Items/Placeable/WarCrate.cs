@@ -44,7 +44,7 @@ namespace TenebrousMod.Items.Placeable
             itemLoot.Add(ItemDropRule.Common(ItemID.ManaPotion, 1, 1, 5));
         }
     }
-        public class WarCrateTile : ModTile
+    public class WarCrateTile : ModTile
     {
         public override void SetStaticDefaults()
         {

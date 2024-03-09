@@ -45,7 +45,7 @@ namespace TenebrousMod.NPCs.Bosses.Emberwing
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.MoonLord;
             NPC.knockBackResist = 0f;
-            NPC.offSetDelayTime = 3333;
+            NPC.offSetDelayTime = 3333; // TODO: is this intended? its a static field
             NPC.noGravity = true;
             NPC.netAlways = true;
             NPC.noTileCollide = true;
@@ -64,9 +64,10 @@ namespace TenebrousMod.NPCs.Bosses.Emberwing
         }
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
+            // FIXME: these are incorrect, should have different conditions instead 
             if (Main.expertMode && !Main.masterMode)
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberwingTreasureBag>(), 1));
-            if(Main.masterMode)
+            if (Main.masterMode)
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberwingTreasureBag>(), 1));
             else
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberWarAxe>(), 3));
@@ -92,6 +93,7 @@ namespace TenebrousMod.NPCs.Bosses.Emberwing
         }
         public override void AI()
         {
+            // FIXME: this is incorrect
             Player player = new Player();
             if (player.dead)
             {
@@ -105,12 +107,14 @@ namespace TenebrousMod.NPCs.Bosses.Emberwing
             switch (AI_State)
             {
                 case (float)ActionState.Normal:
-                        NormalAI();
+                    NormalAI();
                     break;
                 case (float)ActionState.Circle:
-                        CircleAttack(); break;
+                    CircleAttack(); 
+                    break;
             }
-            if (NPC.life <= 0.5 * NPC.lifeMax) {
+            if (NPC.life <= 0.5 * NPC.lifeMax)
+            {
                 if (!Main.dedServ)
                 {
                     Music = MusicLoader.GetMusicSlot(Mod, "Assets/Music/EmberwingThemeStage2");
@@ -134,11 +138,10 @@ namespace TenebrousMod.NPCs.Bosses.Emberwing
             }
             PunchCameraModifier modifier = new PunchCameraModifier(NPC.Center, (Main.rand.NextFloat() * ((float)Math.PI * 2f)).ToRotationVector2(), 20f, 6f, 20, 1000f, FullName);
             Main.instance.CameraModifiers.Add(modifier);
-            base.OnKill();
         }
         public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
         {
-                target.AddBuff(ModContent.BuffType<InternalImploding>(), 320);                
+            target.AddBuff(ModContent.BuffType<InternalImploding>(), 320);
         }
         private void FindPlayer()
         {
@@ -177,6 +180,7 @@ namespace TenebrousMod.NPCs.Bosses.Emberwing
         private bool checkTowardsPlayerX(Player player, Vector2 off)
         {
             float target = player.Center.X + off.X;
+            // TODO: is -target doing something here? since its being subtracted from both sides
             if (Math.Abs(NPC.Center.X + NPC.velocity.X - target) <= Math.Abs(NPC.Center.X - target))
                 return true;
             return false;
@@ -232,7 +236,7 @@ namespace TenebrousMod.NPCs.Bosses.Emberwing
             }
             attackTimer++;
         }
-       
+
         private void CircleAttack()
         {
             NPC npc = NPC;
@@ -268,10 +272,10 @@ namespace TenebrousMod.NPCs.Bosses.Emberwing
             if (a == true)
             {
                 attackTimer = 0;
-                AI_State =(float)ActionState.Normal;
+                AI_State = (float)ActionState.Normal;
             }
 
         }
-        
+
     }
 }

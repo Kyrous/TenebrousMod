@@ -69,12 +69,8 @@ namespace TenebrousMod.NPCs.Bosses.RiptideRavager
         public override void BossLoot(ref string name, ref int potionType)
         {
             potionType = ItemID.GreaterHealingPotion;
-            NPCLoot npcLoot = new NPCLoot();
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RiptideBow>(), 2));
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RiptideStaff>(), 1));
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RiptideRavagerTrophyI>(), 10));
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Riptide>(), 1, 1, 1));
         }
+
         public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
         {
             target.AddBuff(BuffID.Frostburn, 15);
@@ -88,6 +84,7 @@ namespace TenebrousMod.NPCs.Bosses.RiptideRavager
         }
         public override void AI()
         {
+            // FIXME: this is incorrect
             Player player = new Player();
             if (player.dead)
             {

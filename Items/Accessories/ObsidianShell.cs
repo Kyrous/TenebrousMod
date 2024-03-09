@@ -25,7 +25,6 @@ namespace TenebrousMod.Items.Accessories
             }
 
             player.lavaImmune = true;
-            base.UpdateAccessory(player, hideVisual);
         }
         public override void AddRecipes()
         {

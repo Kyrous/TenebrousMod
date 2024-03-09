@@ -32,7 +32,7 @@ namespace TenebrousMod.Items.Weapons.Summoner
         {
             player.AddBuff(Item.buffType, 2);
 
-            var projectile = Projectile.NewProjectileDirect(source, position, velocity, type, damage, knockback, Main.myPlayer);
+            var projectile = Projectile.NewProjectileDirect(source, position, velocity, type, damage, knockback, player.whoAmI);
             projectile.originalDamage = Item.damage;
 
             return false;
@@ -83,7 +83,7 @@ namespace TenebrousMod.Items.Weapons.Summoner
         }
         public override void AI()
         {
-            Player player = new Player();
+            // TODO: this is not correct, the npc isn't one of the in-game ones
             NPC nPC = new NPC();
             if (Main.netMode != NetmodeID.MultiplayerClient)
             {

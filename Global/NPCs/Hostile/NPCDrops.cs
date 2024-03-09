@@ -220,7 +220,7 @@ namespace TenebrousMod.Global.NPCs.Hostile
             if (npc.type == NPCID.UndeadMiner)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<StaffOfTheStones>(), 100, 1, 1));
-                if(Main.CurrentFrameFlags.ActivePlayersCount > 2)
+                if (Main.CurrentFrameFlags.ActivePlayersCount > 2)
                 {
                     npcLoot.Add(ItemDropRule.Common(ItemID.LifeCrystal, 150, 1, 2));
                 }

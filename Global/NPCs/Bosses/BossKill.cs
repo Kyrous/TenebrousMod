@@ -11,10 +11,9 @@ namespace TenebrousMod.Global.NPCs.Bosses
         {
             if(npc.type == NPCID.WallofFlesh)
             {
-                NetMessage message = new NetMessage();
                 if (Main.netMode != NetmodeID.Server)
                 {
-                    string text = Language.GetTextValue("I'LL GET YOU FOR THIS!!!", Lang.GetNPCNameValue(npc.type), message);
+                    string text = Language.GetTextValue("I'LL GET YOU FOR THIS!!!", Lang.GetNPCNameValue(npc.type));
                     Main.NewText(text, 150, 250, 150);
                 }
             }

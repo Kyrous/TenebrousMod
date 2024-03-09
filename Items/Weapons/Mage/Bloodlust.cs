@@ -28,8 +28,10 @@ namespace TenebrousMod.Items.Weapons.Mage
             Item.autoReuse = true;
             Item.shoot = projectile;
             Item.shootSpeed = 3f;
-            Main.projectile[projectile].scale = 0.5f;
-            Main.projectile[projectile].tileCollide = true;
+            // TODO: recheck what was this logic supposed to do
+            // 'projectile' is a type here, not a valid index
+            // Main.projectile[projectile].scale = 0.5f;
+            // Main.projectile[projectile].tileCollide = true;
         }
     }
     //public class FriendlyBloodShot : ModProjectile

@@ -13,7 +13,7 @@ using Terraria.ModLoader;
 namespace TenebrousMod.Items.TreasureBags
 {
     public class EmberwingTreasureBag : ModItem
-    { 
+    {
         public override void SetDefaults()
         {
             Item.width = 32;
@@ -28,6 +28,7 @@ namespace TenebrousMod.Items.TreasureBags
         {
             return true;
         }
+
         public override void ModifyItemLoot(ItemLoot itemLoot)
         {
             itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberwingTrophyI>(), 10));
@@ -36,19 +37,17 @@ namespace TenebrousMod.Items.TreasureBags
             itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<TheGreatEmber>(), 2));
             itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<ObscurumBar>(), 1, 28, 40));
             itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<ObscurumGlove>(), 1));
-            if(Main.masterMode)
-                itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberwingRelicI>(), 1));
-            base.ModifyItemLoot(itemLoot);
+            itemLoot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<EmberwingRelicI>()));
         }
-        WeaponLighting weaponLighting = new WeaponLighting();
 
         public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
         {
-            return weaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);
+            return WeaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);
         }
+
         public override void PostUpdate()
         {
-            weaponLighting.PostLighting(Item, 1);
+            WeaponLighting.PostLighting(Item, 1);
         }
     }
 }

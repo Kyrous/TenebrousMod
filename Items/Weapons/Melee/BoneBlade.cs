@@ -41,6 +41,6 @@ namespace TenebrousMod.Items.Weapons.Melee
             Projectile.scale = 1;
             Projectile.aiStyle = ProjAIStyleID.Beam;
         }
-       
+
     }
 }

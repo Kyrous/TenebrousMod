@@ -19,9 +19,7 @@ namespace TenebrousMod
     {
         public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
         {
-            return new[] {
-                new Item(ModContent.ItemType<StarterBag>(), 1),
-            };
+            yield return new Item(ModContent.ItemType<StarterBag>(), 1);
         }
         public override void CatchFish(FishingAttempt attempt, ref int itemDrop, ref int npcSpawn, ref AdvancedPopupRequest sonar, ref Vector2 sonarPosition)
         {

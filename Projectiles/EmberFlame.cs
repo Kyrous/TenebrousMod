@@ -49,6 +49,7 @@ namespace TenebrousMod.Projectiles
 
                 if (!player.channel)
                 {
+                    // TODO: is this multiplayer friendly?
                     Projectile.ai[0] = 1; // Switch to homing phase
                     Projectile.velocity *= 0.25f;
                     Projectile.penetrate = 1;
@@ -163,8 +164,7 @@ namespace TenebrousMod.Projectiles
             }
 
         }
-        [Obsolete]
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             if (Projectile.ai[0] == 1)
                 for (var i = 0; i < 25; i++)

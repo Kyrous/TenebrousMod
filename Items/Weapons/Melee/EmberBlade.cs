@@ -37,15 +37,13 @@ namespace TenebrousMod.Items.Weapons.Melee
                 .AddTile(TileID.Adamantite)
                 .Register();
         }
-        WeaponLighting weaponLighting = new WeaponLighting();
-
         public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
         {
-            return weaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);
+            return WeaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);
         }
         public override void PostUpdate()
         {
-            weaponLighting.PostLighting(Item, 1);
+            WeaponLighting.PostLighting(Item, 1);
         }
     }
 }

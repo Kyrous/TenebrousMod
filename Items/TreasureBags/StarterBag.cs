@@ -10,12 +10,11 @@ namespace TenebrousMod.Items.TreasureBags
     { 
         public override void SetDefaults()
         {
-            Item item = new Item();
-            item.width = 42;
-            item.height = 36;
-            item.maxStack = 999;
-            item.consumable = true;
-            item.rare = ItemRarityID.Blue;
+            Item.width = 42;
+            Item.height = 36;
+            Item.maxStack = 999;
+            Item.consumable = true;
+            Item.rare = ItemRarityID.Blue;
         }
 
         public override bool CanRightClick()
@@ -37,7 +36,6 @@ namespace TenebrousMod.Items.TreasureBags
             itemLoot.Add(ItemDropRule.Common(ItemID.WoodGreaves, 1, 1, 1));
             itemLoot.Add(ItemDropRule.Common(ItemID.WoodenCrate, 1, 3, 3));
             itemLoot.Add(ItemDropRule.Common(ItemID.Chest, 1, 3, 3));
-            base.ModifyItemLoot(itemLoot);
         }
     }
 }

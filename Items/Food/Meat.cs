@@ -8,17 +8,15 @@ namespace TenebrousMod.Items.Food
     {
         public override void SetDefaults()
         {
-            Item item = new Item();
             Item.DefaultToFood(34, 18, BuffID.WellFed, 18000);
-            item.maxStack = 30;
-            item.value = Item.sellPrice(silver: 5);
-            item.consumable = true;
-            item.rare = ItemRarityID.LightPurple;
+            Item.maxStack = 30;
+            Item.value = Item.sellPrice(silver: 5);
+            Item.consumable = true;
+            Item.rare = ItemRarityID.LightPurple;
         }
         public override void OnConsumeItem(Player player)
         {
             player.Heal(5);
-            base.OnConsumeItem(player);
         }
     }
 }

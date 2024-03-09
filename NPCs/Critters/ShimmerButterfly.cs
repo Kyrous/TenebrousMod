@@ -8,7 +8,6 @@ namespace TenebrousMod.NPCs.Critters
 {
     public class ShimmerButterflyItem : ModItem
     {
-        CritterItemLighting CIL = new CritterItemLighting();
         public override void SetDefaults()
         {
             Item.width = 26;
@@ -24,7 +23,7 @@ namespace TenebrousMod.NPCs.Critters
         }
         public override void PostUpdate()
         {
-            CIL.DropLighting(Item);
+            CritterItemLighting.DropLighting(Item);
         }
         public override void UpdateInventory(Player player)
         {
@@ -32,8 +31,8 @@ namespace TenebrousMod.NPCs.Critters
         }
         public override bool? UseItem(Player player)
         {
-                int type = ModContent.NPCType<ShimmerButterfly>();
-                NPC.NewNPC(NPC.GetSource_NaturalSpawn(), (int)player.Center.X, (int)player.Center.Y, type);
+            int type = ModContent.NPCType<ShimmerButterfly>();
+            NPC.NewNPC(NPC.GetSource_NaturalSpawn(), (int)player.Center.X, (int)player.Center.Y, type);
             return true;
         }
     }

@@ -11,13 +11,11 @@ namespace TenebrousMod.Items.Bars
    
     public class ObscurumBar : ModItem
     {
-
         public override void SetStaticDefaults()
         {
             Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(5, 5));
             ItemID.Sets.AnimatesAsSoul[Item.type] = true;
             Item.color = Color.White;
-            base.SetStaticDefaults();
         }
         public override void SetDefaults()
         {

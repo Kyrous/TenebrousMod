@@ -10,6 +10,7 @@ namespace TenebrousMod.BossBars
 {
     public class TenebrousModBossBar : ModBossBar
     {
+        // TODO: ???
         public override Asset<Texture2D> GetIconTexture(ref Rectangle? iconFrame)
         {
             return null;

@@ -7,12 +7,13 @@ namespace TenebrousMod.Global
 {
     public class Npcbossstats : GlobalNPC
     {
+        // TODO: ?
         public override bool InstancePerEntity => true;
 
         public override void SetDefaults(NPC npc)
         {
-                npc.lifeMax = (int)Math.Round(1.2f * npc.lifeMax);
-            if(npc.boss)
+            npc.lifeMax = (int)Math.Round(1.2f * npc.lifeMax);
+            if (npc.boss)
             {
                 npc.BossBar = ModContent.GetInstance<TenebrousModBossBar>();
             }

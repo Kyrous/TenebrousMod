@@ -32,7 +32,8 @@ namespace TenebrousMod.Items.Weapons.Summoner
         {
             player.AddBuff(Item.buffType, 2);
 
-            var projectile = Projectile.NewProjectileDirect(source, position, velocity, type, damage, knockback, Main.myPlayer);
+            // TODO: is this multiplayer friendly?
+            var projectile = Projectile.NewProjectileDirect(source, position, velocity, type, damage, knockback, player.whoAmI);
             projectile.originalDamage = Item.damage;
 
             return false;
@@ -74,7 +75,7 @@ namespace TenebrousMod.Items.Weapons.Summoner
                 if (target != null)
                 {
                     Vector2 velocity = Vector2.Normalize(target.Center - Projectile.Center) * 0.1f;
-                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, velocity * 6, ProjectileID.NailFriendly, 9, 1, Main.myPlayer);
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, velocity * 6, ProjectileID.NailFriendly, 9, 1, Projectile.owner);
                     attackTimer = 301;
                 }
             }

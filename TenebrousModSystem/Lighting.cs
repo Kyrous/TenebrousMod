@@ -11,7 +11,7 @@ namespace TenebrousMod.TenebrousModSystem
        //
        //Summary:
        //LightAmount is how much light there will be.
-        public bool LightingOnGround(Item Item, int LightAmount, SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
+        public static bool LightingOnGround(Item Item, int LightAmount, SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
         {
             Lighting.AddLight(Item.Center, Color.White.ToVector3() * LightAmount);
             Texture2D texture = TextureAssets.Item[Item.type].Value;
@@ -59,14 +59,14 @@ namespace TenebrousMod.TenebrousModSystem
 
             return true;
         }
-        public void PostLighting(Item Item, int LightAmount)
+        public static void PostLighting(Item Item, int LightAmount)
         {
             Lighting.AddLight(Item.Center, Color.White.ToVector3() * LightAmount);
         }
     }
     public class CritterItemLighting : ModSystem
     {
-        public void DropLighting(Item Item)
+        public static void DropLighting(Item Item)
         {
             Lighting.AddLight(Item.Center, Color.White.ToVector3() * 1f);
         }

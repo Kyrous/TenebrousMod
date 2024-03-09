@@ -18,7 +18,6 @@ namespace TenebrousMod.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.GetDamage<GenericDamageClass>() *= 1.05f;
-            base.UpdateAccessory(player, hideVisual);
         }
         public override void AddRecipes()
         {

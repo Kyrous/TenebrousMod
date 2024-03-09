@@ -20,7 +20,7 @@ namespace TenebrousMod.Items.Placeable
             Item.createTile = ModContent.TileType<EtherealStone>();
         }
     }
-        public class EtherealStone : ModTile
+    public class EtherealStone : ModTile
     {
         public override void SetStaticDefaults()
         {

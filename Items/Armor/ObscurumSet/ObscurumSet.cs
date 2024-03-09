@@ -13,15 +13,14 @@ namespace TenebrousMod.Items.Armor.ObscurumSet
     [AutoloadEquip(EquipType.Body)]
     public class ObscurumPlate : ModItem
     {
-        WeaponLighting weaponLighting = new WeaponLighting();
 
         public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
         {
-            return weaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);
+            return WeaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);
         }
         public override void PostUpdate()
         {
-            weaponLighting.PostLighting(Item, 1);
+            WeaponLighting.PostLighting(Item, 1);
         }
         public override void SetDefaults()
         {
@@ -49,15 +48,13 @@ namespace TenebrousMod.Items.Armor.ObscurumSet
         [AutoloadEquip(EquipType.Head)]
         public class ObscurumHelmetMelee : ModItem
         {
-            WeaponLighting weaponLighting = new WeaponLighting();
-
             public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
             {
-                return weaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);
+                return WeaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);
             }
             public override void PostUpdate()
             {
-                weaponLighting.PostLighting(Item, 1);
+                WeaponLighting.PostLighting(Item, 1);
             }
             public override void SetStaticDefaults()
             {
@@ -98,15 +95,14 @@ namespace TenebrousMod.Items.Armor.ObscurumSet
         [AutoloadEquip(EquipType.Head)]
         public class ObscurumHeadgearRanger : ModItem
         {
-            WeaponLighting weaponLighting = new WeaponLighting();
 
             public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
             {
-                return weaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);
+                return WeaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);
             }
             public override void PostUpdate()
             {
-                weaponLighting.PostLighting(Item, 1);
+                WeaponLighting.PostLighting(Item, 1);
             }
             public override void SetStaticDefaults()
             {
@@ -145,20 +141,17 @@ namespace TenebrousMod.Items.Armor.ObscurumSet
         [AutoloadEquip(EquipType.Head)]
         public class ObscurumHoodMage : ModItem
         {
-
-            WeaponLighting weaponLighting = new WeaponLighting();
-
             public override void UpdateEquip(Player player)
             {
                 player.GetDamage(DamageClass.Magic) *= 1.05f;
             }
             public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
             {
-                return weaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);
+                return WeaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);
             }
             public override void PostUpdate()
             {
-                weaponLighting.PostLighting(Item, 1);
+                WeaponLighting.PostLighting(Item, 1);
             }
             public override void SetStaticDefaults()
             {
@@ -195,19 +188,17 @@ namespace TenebrousMod.Items.Armor.ObscurumSet
         [AutoloadEquip(EquipType.Head)]
         public class ObscurumMaskSummoner : ModItem
         {
-
-            WeaponLighting weaponLighting = new WeaponLighting();
             public override void UpdateEquip(Player player)
             {
                 player.GetDamage(DamageClass.Summon) *= 1.05f;
             }
             public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
             {
-                return weaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);
+                return WeaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);
             }
             public override void PostUpdate()
             {
-                weaponLighting.PostLighting(Item, 1);
+                WeaponLighting.PostLighting(Item, 1);
             }
             public override void SetStaticDefaults()
             {
@@ -244,15 +235,13 @@ namespace TenebrousMod.Items.Armor.ObscurumSet
         [AutoloadEquip(EquipType.Legs)]
         public class ObscurumGreaves : ModItem
         {
-            WeaponLighting weaponLighting = new WeaponLighting();
-
             public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
             {
-                return weaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);
+                return WeaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);
             }
             public override void PostUpdate()
             {
-                weaponLighting.PostLighting(Item, 1);
+                WeaponLighting.PostLighting(Item, 1);
             }
 
             public override void SetDefaults()
@@ -279,15 +268,15 @@ namespace TenebrousMod.Items.Armor.ObscurumSet
         [AutoloadEquip(EquipType.Wings)]
         public class ObscurumWings : ModItem
         {
-            WeaponLighting weaponLighting = new WeaponLighting();
+            WeaponLighting WeaponLighting = new WeaponLighting();
 
             public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
             {
-                return weaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);
+                return WeaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);
             }
             public override void PostUpdate()
             {
-                weaponLighting.PostLighting(Item, 1);
+                WeaponLighting.PostLighting(Item, 1);
             }
             public override void SetStaticDefaults()
             {

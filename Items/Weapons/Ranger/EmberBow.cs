@@ -27,6 +27,7 @@ namespace TenebrousMod.Items.Weapons.Ranger
             Item.UseSound = SoundID.Item5;
             Item.shoot = ModContent.ProjectileType<EmberArrowProj>();
         }
+
         public override void AddRecipes()
         {
             CreateRecipe()
@@ -34,15 +35,15 @@ namespace TenebrousMod.Items.Weapons.Ranger
                 .AddTile(TileID.AdamantiteForge)
                 .Register();
         }
-        WeaponLighting weaponLighting = new WeaponLighting();
 
         public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
         {
-            return weaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);
+            return WeaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);
         }
+
         public override void PostUpdate()
         {
-            weaponLighting.PostLighting(Item, 1);
+            WeaponLighting.PostLighting(Item, 1);
         }
     }
 }

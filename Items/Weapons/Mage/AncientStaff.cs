@@ -14,7 +14,6 @@ namespace TenebrousMod.Items.Weapons.Mage
             ItemID.Sets.AnimatesAsSoul[Item.type] = true;
 
             Item.color = Color.White;
-            base.SetStaticDefaults();
         }
         public override void SetDefaults()
         {

@@ -17,7 +17,6 @@ namespace TenebrousMod.Items.Weapons.Melee
             ItemID.Sets.AnimatesAsSoul[Item.type] = true;
           
             Item.color = Color.White;
-            base.SetStaticDefaults();
         }
         
         public override void SetDefaults()
@@ -41,7 +40,6 @@ namespace TenebrousMod.Items.Weapons.Melee
         public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
         {
             SoundEngine.PlaySound(SoundID.Thunder);
-            base.OnHitNPC(player, target, hit, damageDone);
         }
         public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
         {
@@ -94,7 +92,6 @@ namespace TenebrousMod.Items.Weapons.Melee
         public override void PostUpdate()
         {
             Lighting.AddLight(Item.Center, Color.White.ToVector3() * 1);
-            base.PostUpdate();
         }
 
     }
@@ -103,8 +100,8 @@ namespace TenebrousMod.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
             Main.projFrames[Projectile.type] = 5;
-            base.SetStaticDefaults();
         }
+
         public override void SetDefaults()
         {
             Projectile.damage = 15;
@@ -116,17 +113,19 @@ namespace TenebrousMod.Items.Weapons.Melee
             Projectile.friendly = true;
             Projectile.tileCollide = false;
         }
+
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             SoundEngine.PlaySound(SoundID.Thunder);
             Player player = Main.player[Projectile.owner];
             Vector2 direction = (player.Center - target.Center).SafeNormalize(Vector2.UnitX);
             direction = direction.RotatedByRandom(MathHelper.ToRadians(10));
+            // TODO: this change does not propagate to other clients
             int projectile = Projectile.NewProjectile(player.GetSource_FromThis(), player.Center, direction * 10, ProjectileID.CultistBossIceMist, 15, 1, Main.myPlayer);
             Main.projectile[projectile].friendly = true;
             Main.projectile[projectile].hostile = false;
-            base.OnHitNPC(target, hit, damageDone);
         }
+
         public override void AI()
         {
             if (++Projectile.frameCounter >= 4)
@@ -135,9 +134,8 @@ namespace TenebrousMod.Items.Weapons.Melee
                 if (++Projectile.frame >= Main.projFrames[Projectile.type])
                     Projectile.frame = 0;
             }
-           
-            base.AI();
         }
+
         public override bool PreDraw(ref Color lightColor)
         {
             lightColor = Color.White;
