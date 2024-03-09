@@ -268,8 +268,6 @@ namespace TenebrousMod.Items.Armor.ObscurumSet
         [AutoloadEquip(EquipType.Wings)]
         public class ObscurumWings : ModItem
         {
-            WeaponLighting WeaponLighting = new WeaponLighting();
-
             public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
             {
                 return WeaponLighting.LightingOnGround(Item, 1, spriteBatch, lightColor, alphaColor, ref rotation, ref scale, whoAmI);

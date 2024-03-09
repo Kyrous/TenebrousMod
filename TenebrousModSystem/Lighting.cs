@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace TenebrousMod.TenebrousModSystem
 {
-    public class WeaponLighting : ModSystem
+    public static class WeaponLighting 
     {
        //
        //Summary:

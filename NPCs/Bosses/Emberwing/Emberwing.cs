@@ -79,17 +79,17 @@ namespace TenebrousMod.NPCs.Bosses.Emberwing
         public override void BossLoot(ref string name, ref int potionType)
         {
             potionType = ItemID.GreaterHealingPotion;
+            // FIXME: the code here will cause a nullref so its commented out, but it missmatches with the ModifyNPCLoot contents
+            // which should be kept? 
+            /*
             NPCLoot npcLoot = new NPCLoot();
-            if (Main.expertMode && !Main.masterMode)
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberwingTreasureBag>(), 1));
             if (Main.masterMode)
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberwingTreasureBag>(), 1));
             else
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberWarAxe>(), 2));
             npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberScythe>(), 1));
             npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TheGreatEmber>(), 2));
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberwingTrophyI>(), 10));
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ObscurumBar>(), 1, 24, 36));
+            */
         }
         public override void AI()
         {
