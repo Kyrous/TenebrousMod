@@ -5,7 +5,7 @@
     <AssemblyName>TenebrousMod</AssemblyName>
     <TargetFramework>net6.0</TargetFramework>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>10</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <AdditionalFiles Remove="NPCs - Copy\**" />
