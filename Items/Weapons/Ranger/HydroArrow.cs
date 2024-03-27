@@ -5,11 +5,17 @@ using Microsoft.Xna.Framework.Graphics;
 using TenebrousMod.TenebrousModSystem;
 using Microsoft.Xna.Framework;
 using Terraria.Audio;
+using Terraria.DataStructures;
 
 namespace TenebrousMod.Items.Weapons.Ranger
 {
     public class HydroArrow : ModItem
     {
+        public override void SetStaticDefaults()
+        {
+            Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(5, 3));
+            ItemID.Sets.AnimatesAsSoul[Item.type] = true;
+        }
         public override void SetDefaults()
         {
             Item.damage = 14;
@@ -35,7 +41,7 @@ namespace TenebrousMod.Items.Weapons.Ranger
     {
         public override void SetStaticDefaults()
         {
-            Main.projFrames[Projectile.type] = 6;
+            Main.projFrames[Projectile.type] = 3;
         }
         public override void SetDefaults()
         {
@@ -72,7 +78,7 @@ namespace TenebrousMod.Items.Weapons.Ranger
         }
         public override void AI()
         {
-            if (++Projectile.frameCounter >= 6)
+            if (++Projectile.frameCounter >= 3)
             {
                 Projectile.frameCounter = 0;
                 if (++Projectile.frame >= Main.projFrames[Projectile.type])

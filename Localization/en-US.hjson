@@ -375,8 +375,6 @@ NPCs: {
 	Emberwing.DisplayName: Emberwing
 	RiptideRavager.DisplayName: Riptide Ravager
 	ShimmerButterfly.DisplayName: Shimmer Butterfly
-	StarSlime.DisplayName: Star Slime
-	AngelEye.DisplayName: Angel Eye
 }
 
 Buffs: {
@@ -403,7 +401,6 @@ Buffs: {
 
 Tiles: {
 	MainMenuThemeMusicBoxTile.MapEntry: Main Menu Theme Music Box
-	MainMenuThemeDayMusicBoxTile.MapEntry: Main Menu Theme Day Music Box Tile
-	MainMenuThemeNightMusicBoxTile.MapEntry: Main Menu Theme Night Music Box Tile
-	WarCrateTile.MapEntry: War Crate Tile
+	MainMenuThemeDayMusicBoxTile.MapEntry: Main Menu Theme Day Music Box
+	MainMenuThemeNightMusicBoxTile.MapEntry: Main Menu Theme Night Music Box
 }

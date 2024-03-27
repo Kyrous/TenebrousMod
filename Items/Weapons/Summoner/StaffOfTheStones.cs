@@ -9,6 +9,10 @@ namespace TenebrousMod.Items.Weapons.Summoner
 {
     public class StaffOfTheStones : ModItem
     {
+        public override void SetStaticDefaults()
+        {
+            Item.staff[Item.type] = true;
+        }
         public override void SetDefaults()
         {
             Item.mana = 5;

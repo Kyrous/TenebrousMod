@@ -4,6 +4,10 @@ using Terraria.ID;
 using TenebrousMod.Items.Materials;
 using Terraria.ObjectData;
 using Terraria.GameContent.ItemDropRules;
+using Terraria.Localization;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using TenebrousMod.Items.Weapons.Ranger;
 
 namespace TenebrousMod.Items.Placeable
 {
@@ -15,7 +19,8 @@ namespace TenebrousMod.Items.Placeable
         }
         public override void SetDefaults()
         {
-            Item.CloneDefaults(ItemID.GoldenCrate);
+            //Item.CloneDefaults(ItemID.GoldenCrate);
+            Item.DefaultToPlaceableTile(ModContent.TileType<WarCrateTile>());
             Item.width = 34;
             Item.height = 34;
             Item.maxStack = 99;
@@ -24,8 +29,7 @@ namespace TenebrousMod.Items.Placeable
             Item.useTime = 10;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
-            Item.value = Item.buyPrice(silver: 25);
-            Item.createTile = ModContent.TileType<WarCrateTile>();
+            Item.value = Item.buyPrice(silver: 25); // TODO: is this buyPrice or sellPrice? examplemod uses sellPrice
         }
         public override void ModifyResearchSorting(ref ContentSamples.CreativeHelper.ItemGroup itemGroup)
         {
@@ -42,20 +46,33 @@ namespace TenebrousMod.Items.Placeable
             itemLoot.Add(ItemDropRule.Common(ItemID.LifeCrystal, 4, 1, 2));
             itemLoot.Add(ItemDropRule.Common(ItemID.HealingPotion, 1, 1, 5));
             itemLoot.Add(ItemDropRule.Common(ItemID.ManaPotion, 1, 1, 5));
+            if(NPC.downedPlantBoss)
+            {
+                itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<HydroFury>(), 2, 1, 1));
+                itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<HydroArrow>(), 1, 400 ,800));
+            }
         }
     }
     public class WarCrateTile : ModTile
     {
         public override void SetStaticDefaults()
         {
-            Main.tileSolid[Type] = true;
+            Main.tileSolidTop[Type] = true;
             Main.tileFrameImportant[Type] = true;
             Main.tileBlockLight[Type] = true;
             Main.tileLighted[Type] = true;
-            TileObjectData.newTile.LavaDeath = false;
+            Main.tileTable[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
-            TileObjectData.newTile.CoordinateHeights = new[] { 16, 16 };
+            TileObjectData.newTile.LavaDeath = false;
+            TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
+            TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.addTile(Type);
+
+            LocalizedText name = CreateMapEntryName();
+            AddMapEntry(new Color(200, 200, 200), name); // TODO: pick an appropiate color
         }
+        public override bool CreateDust(int i, int j, ref int type) => false;
     }
+
+
 }

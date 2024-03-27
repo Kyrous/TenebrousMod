@@ -1,6 +1,6 @@
 displayName = Tenebrous Mod (Beta)
 author = Reapermen and the Dev Team
-version = 0.5
+version = 0.5.4
 hideCode = true
 hideResources = true
 includeSource = false

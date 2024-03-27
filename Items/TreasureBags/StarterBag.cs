@@ -1,4 +1,5 @@
-﻿using TenebrousMod.Items.Placeable;
+﻿using TenebrousMod.Items.Food;
+using TenebrousMod.Items.Placeable;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
@@ -10,7 +11,7 @@ namespace TenebrousMod.Items.TreasureBags
     { 
         public override void SetDefaults()
         {
-            Item.width = 42;
+            Item.width = 34;
             Item.height = 36;
             Item.maxStack = 999;
             Item.consumable = true;
@@ -30,10 +31,7 @@ namespace TenebrousMod.Items.TreasureBags
             itemLoot.Add(ItemDropRule.Common(ItemID.LesserManaPotion, 1, 3, 3));
             itemLoot.Add(ItemDropRule.Common(ItemID.IronskinPotion, 1, 3, 3));
             itemLoot.Add(ItemDropRule.Common(ItemID.Apple, 1, 10, 10));
-            itemLoot.Add(ItemDropRule.Common(ItemID.Wood, 1, 100, 100));
-            itemLoot.Add(ItemDropRule.Common(ItemID.WoodHelmet, 1, 1, 1));
-            itemLoot.Add(ItemDropRule.Common(ItemID.WoodBreastplate, 1, 1, 1));
-            itemLoot.Add(ItemDropRule.Common(ItemID.WoodGreaves, 1, 1, 1));
+            itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<Meat>(), 1, 5, 5));
             itemLoot.Add(ItemDropRule.Common(ItemID.WoodenCrate, 1, 3, 3));
             itemLoot.Add(ItemDropRule.Common(ItemID.Chest, 1, 3, 3));
         }

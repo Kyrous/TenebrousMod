@@ -7,7 +7,12 @@ using Terraria.ModLoader;
 namespace TenebrousMod.Items.Weapons.Mage
 {
     public class GraniteStaff : ModItem
+
     {
+        public override void SetStaticDefaults()
+        {
+            Item.staff[Item.type] = true;
+        }
         public override void SetDefaults()
         {
             Item.damage = 14;

@@ -15,8 +15,8 @@ namespace TenebrousMod.Items.Weapons.Melee
             Item.useTime = 25;
             Item.useAnimation = 25;
             Item.useStyle = ItemUseStyleID.Swing;
-            Item.width = 40;
-            Item.height = 44;
+            Item.width = 38;
+            Item.height = 42;
             Item.knockBack = 2;
             Item.UseSound = SoundID.Item1;
             Item.shoot = ProjectileID.IceBolt;

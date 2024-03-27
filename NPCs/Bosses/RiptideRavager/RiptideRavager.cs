@@ -9,9 +9,11 @@ using TenebrousMod.Items.Weapons.Melee;
 using Terraria.GameContent.ItemDropRules;
 using TenebrousMod.Items.Weapons.Summoner;
 using TenebrousMod.Items.Weapons.Ranger;
+using Terraria.GameContent.Bestiary;
 
 namespace TenebrousMod.NPCs.Bosses.RiptideRavager
 {
+    [AutoloadBossHead]
     public class RiptideRavager : ModNPC
     {
         public ref float AI_State => ref NPC.ai[0];
@@ -59,16 +61,43 @@ namespace TenebrousMod.NPCs.Bosses.RiptideRavager
                 Music = MusicLoader.GetMusicSlot(Mod, "Assets/Music/RiptideRavagerTheme");
             }
         }
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            // We can use AddRange instead of calling Add multiple times in order to add multiple items at once
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[] {
+				// Sets the preferred biomes of this town NPC listed in the bestiary.
+				// With Town NPCs, you usually set this to what biome it likes the most in regards to NPC happiness.
+				BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Ocean,
+				// Sets your NPC's flavor text in the bestiary.
+                new MoonLordPortraitBackgroundProviderBestiaryInfoElement(),
+                new FlavorTextBestiaryInfoElement("Riptide Ravager, once a guardian of the seas under Sinorus and Virlina's protection, fell victim to Sinorus's descent into darkness. Cursed by Sinorus, Riptide Ravager now roams the oceans, wreaking havoc and unleashing chaotic storms upon any who cross its path."),
+            });
+
+
+        }
+
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RiptideBow>(), 2));
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RiptideStaff>(), 1));
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RiptideRavagerTrophyI>(), 10));
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Riptide>(), 1, 1, 1));
+            if(Main.expertMode)
+                npcLoot.Add(ItemDropRule.BossBag(ModContent.ItemType<RiptideRavagerTreasureBag>()));
+
+            if (!Main.expertMode)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RiptideRavagerTrophyI>(), 10));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RiptideBow>(), 2));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RiptideStaff>(), 1));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Riptide>(), 1));
+            }
+            npcLoot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<RiptideRavagerRelicI>()));
+            //npcLoot.Add(ItemDropRule.MasterModeDropOnAllPlayers(ModContent.ItemType<MinionBossPetItem>(), 4));
+            LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());
+            //notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<MinionBossMask>(), 7));
+
+            npcLoot.Add(notExpertRule);
         }
         public override void BossLoot(ref string name, ref int potionType)
         {
-            potionType = ItemID.GreaterHealingPotion;
+            potionType = ItemID.HealingPotion;
         }
 
         public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
@@ -78,9 +107,7 @@ namespace TenebrousMod.NPCs.Bosses.RiptideRavager
         private enum ActionState
         {
             Normal,
-            Spin,
-            Charge,
-            ProjectileSpam
+            Charge
         }
         public override void AI()
         {
@@ -117,7 +144,7 @@ namespace TenebrousMod.NPCs.Bosses.RiptideRavager
             int nextState = (int)AI_State + 1;
             if (NPC.ai[2] == SwitchInterval)
             {
-                if (nextState > (int)ActionState.ProjectileSpam)
+                if (nextState > (int)ActionState.Charge)
                 {
                     nextState = (int)ActionState.Normal;
                     NPC.ai[2] = 0;
@@ -133,19 +160,13 @@ namespace TenebrousMod.NPCs.Bosses.RiptideRavager
             wasWet = NPC.wet;
             switch (AI_State)
             {
-                case (float)ActionState.Normal:
+                case (int)ActionState.Normal:
                     lookAtPlayer(NPC, player);
                     MoveTowardsPlayer();
                     break;
-                case (float)ActionState.Spin:
-                    SpinAroundPlayer();
-                    break;
-                case (float)ActionState.Charge:
+                case (int)ActionState.Charge:
                     //LookAtPlayer(NPC, player);
                     Charge();
-                    break;
-                case (float)ActionState.ProjectileSpam:
-                    ProjectileSpam();
                     break;
             }
         }
@@ -237,10 +258,7 @@ namespace TenebrousMod.NPCs.Bosses.RiptideRavager
             if (NPC.position.X < player.position.X)
                 NPC.velocity.X = -4f;*/
         }
-        private void SpinAroundPlayer()
-        {
-
-        }
+       
         private void Charge()
         {
             NPC npc = NPC;
@@ -265,10 +283,6 @@ namespace TenebrousMod.NPCs.Bosses.RiptideRavager
             {
                 NPC.damage = 18;
             }
-        }
-        private void ProjectileSpam()
-        {
-
-        }
+        } 
     }
 }

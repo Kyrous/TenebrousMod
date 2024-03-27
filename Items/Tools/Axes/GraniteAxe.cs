@@ -16,7 +16,7 @@ namespace TenebrousMod.Items.Tools.Axes
             Item.useAnimation = 25;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.width = 40;
-            Item.height = 40;
+            Item.height = 36;
             Item.axe = 11;
             Item.knockBack = 1;
             Item.UseSound = SoundID.Item1;
