@@ -3,6 +3,7 @@ using Terraria.ModLoader.Utilities;
 using Terraria.ModLoader;
 using Terraria;
 using TenebrousMod.TenebrousModSystem;
+using Terraria.GameContent.Bestiary;
 
 namespace TenebrousMod.NPCs.Critters
 {
@@ -61,7 +62,16 @@ namespace TenebrousMod.NPCs.Critters
         {
             return SpawnCondition.UndergroundJungle.Chance * 0.25f;
         }
-
-
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            // We can use AddRange instead of calling Add multiple times in order to add multiple items at once
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[] {
+				// Sets the preferred biomes of this town NPC listed in the bestiary.
+				// With Town NPCs, you usually set this to what biome it likes the most in regards to NPC happiness.
+				BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.UndergroundJungle,
+				// Sets your NPC's flavor text in the bestiary.
+                new FlavorTextBestiaryInfoElement("A really powerful butterfly powered by the shimmer capable of catching fish real easy."),
+            });
+        }
     }
 }

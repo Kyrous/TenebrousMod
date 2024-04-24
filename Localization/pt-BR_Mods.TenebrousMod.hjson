@@ -1,0 +1,451 @@
+Configs: {
+	Config: {
+		SupremacyMode: {
+			Tooltip: Uma dificuldade incômoda para os especialistas!
+			Label: Modo Supremacia
+		}
+
+		Headers: {
+			Items: Items
+			GeneralGameplay: Jogabilidade Geral
+		}
+
+		DisplayName: Configuração
+	}
+}
+
+Items: {
+	StarterBag: {
+		Tooltip: O início da Jornada Gloomy!
+		DisplayName: Saco de Partida
+	}
+
+	Meat: {
+		DisplayName: Carne
+		Tooltip: ""
+	}
+
+	PhotonBlade: {
+		DisplayName: Lamina de fotons
+		Tooltip: Carregado com raios. Se o Relâmpago atingir o inimigo, você terá uma aura de picos ao seu redor.
+	}
+
+	ObscurumBar: {
+		DisplayName: Barra de Obscurum
+		Tooltip: O material necessário para fazer engrenagens Obscurum e Ember
+	}
+
+	Trisma: {
+		DisplayName: Trisma
+		Tooltip: ""
+	}
+
+	TheGreatGranite: {
+		DisplayName: O Grande Granito
+		Tooltip: ""
+	}
+
+	GraniteAxe: {
+		DisplayName: Machado de Granito
+		Tooltip: ""
+	}
+
+	GraniteHammer: {
+		DisplayName: Martelo de Granito
+		Tooltip: ""
+	}
+
+	GranitePickaxe: {
+		DisplayName: Piqueta de Granito
+		Tooltip: ""
+	}
+
+	GraniteBlade: {
+		DisplayName: Lamina de Granito
+		Tooltip: ""
+	}
+
+	GraniteWhip: {
+		DisplayName: Chicote de Granito
+		Tooltip: ""
+	}
+
+	GraniteCore: {
+		DisplayName: Nucleo de Granito
+		Tooltip: ""
+	}
+
+	GraniteBlaster: {
+		DisplayName: Granito Blaster
+		Tooltip: ""
+	}
+
+	GraniteShard: {
+		DisplayName: Caco de Granito
+		Tooltip: O material necessário para fazer engrenagem de granito
+	}
+
+	GraniteStaff: {
+		DisplayName: Equipe de Granito
+		Tooltip: Retira orbes de granito.
+	}
+
+	ObsidianShell: {
+		DisplayName: Obsidiana Shell
+		Tooltip: Aumenta a regeneração da vida e a defesa na metade da saúde
+	}
+
+	GraniteEmblem: {
+		DisplayName: Emblema de granito
+		Tooltip: ""
+	}
+
+	EmberScythe: {
+		DisplayName: Foice de brasa
+		Tooltip: Atira Homing Ember Flames
+	}
+
+	EmberBlade: {
+		DisplayName: Lamina de brasa
+		Tooltip: Atira uma chama de brasa
+	}
+
+	GraniteBow: {
+		DisplayName: Arco de Granito
+		Tooltip: Transforma flechas de madeira em flechas de granito
+	}
+
+	Riptide: {
+		DisplayName: Correnteza
+		Tooltip: ""
+	}
+
+	TheGreatEmber: {
+		DisplayName: A Grande Brasa
+		Tooltip: Carregue a espada balançando-a e, em seguida, quando você parar de balançar. lança Homing Ember Flames
+	}
+
+	EtherealVitalityCore: {
+		Tooltip:
+			'''
+			Defesa aumentou em 4 e Melee Damage aumentou em 5%, enquanto no Bioma Granito
+			Todos os danos aumentaram em 10%
+			'''
+		DisplayName: Nucleo de vitalidade eterea
+	}
+
+	EtherealEmblem: {
+		Tooltip: Todos os danos aumentaram em 5%
+		DisplayName: Emblema Etéreo
+	}
+
+	BoneBlade: {
+		DisplayName: Lamina Ossea
+		Tooltip: Gotas de Skeletron
+	}
+
+	Eyesore: {
+		DisplayName: Monstruosidade
+		Tooltip: Gotas do Eye of Cthulhu
+	}
+
+	RiptideBow: {
+		DisplayName: Arco Riptide
+		Tooltip: Transforma qualquer flecha de madeira em uma flecha d'água.
+	}
+
+	EmberWarAxe: {
+		DisplayName: Machado de guerra Ember
+		Tooltip: ""
+	}
+
+	EmberArrow: {
+		DisplayName: Seta de brasa
+		Tooltip: Inflige uma queimadura de fogo a qualquer inimigo que atinja.
+	}
+
+	EmberBow: {
+		DisplayName: Arco de brasa
+		Tooltip: Transforma todos os tipos de seta em flechas de chama
+	}
+
+	ObscurumGlove: {
+		Tooltip:
+			'''
+			Todos os danos aumentaram 7% e a Defesa diminuiu 4
+			Enquanto em 25% de sua saúde, sua defesa sobe em 8 e seu dano sobe em 10%
+			10% de aumento na chance de ataque crítico
+			'''
+		DisplayName: Luva Obscurum
+	}
+
+	ObscurumPlate: {
+		DisplayName: Placa de Obscuro
+		Tooltip:
+			'''
+			Chance de ataque crítico aumentou em 8%
+			Dá imunidade à lava ou qualquer forma de fogo
+			Dá-lhe o buff Inferno quando em 25% Saúde
+			'''
+	}
+
+	ObscurumHelmetMelee: {
+		SetBonus: Mods.TenebrousMod.Items.ObscurumHelmetMelee.SetBonus
+		DisplayName: Capacete Obscurum
+		Tooltip: Aumenta o dano corpo a corpo em 5%
+	}
+
+	ObscurumHoodMage: {
+		SetBonus: Mods.TenebrousMod.Items.ObscurumHoodMage.SetBonus
+		DisplayName: Capuz Obscurum
+		Tooltip: Aumenta o dano mágico em 5%
+	}
+
+	ObscurumMaskSummoner: {
+		SetBonus: Mods.TenebrousMod.Items.ObscurumMaskSummoner.SetBonus
+		DisplayName: Máscara de Obscurum
+		Tooltip: Aumenta o Dano do Invocador em 5%
+	}
+
+	ObscurumHeadgearRanger: {
+		SetBonus: Mods.TenebrousMod.Items.ObscurumHeadgearRanger.SetBonus
+		DisplayName: Obscurum Chapelaria
+		Tooltip: Aumenta o dano variado em 5%
+	}
+
+	ObscurumGreaves: {
+		DisplayName: Torresmos Obscurum
+		Tooltip:
+			'''
+			Aumenta o movimento em 10%
+			Permite o movimento sobre a água e lava
+			'''
+	}
+
+	EmberwingTreasureBag: {
+		DisplayName: Saco do tesouro de brasa
+		Tooltip: ""
+	}
+
+	ObscurumWings: {
+		DisplayName: Asas de Obscurum
+		Tooltip: ""
+	}
+
+	RiptideStaff: {
+		DisplayName: Equipe Riptide
+		Tooltip: Invoca um mini Riptide Ravager para ajudar a lutar por você
+	}
+
+	EmberPact: {
+		Tooltip:
+			'''
+			Invocar Emberwing
+			Só pode ser usado quando você derrotou plantera e quando você está no submundo
+			'''
+		DisplayName: Pacto de brasa
+	}
+
+	MainMenuThemeMusicBox: {
+		Tooltip: ""
+		DisplayName: Caixa de Musica do Tema do Menu Principal
+	}
+
+	ShimmerButterflyItem: {
+		DisplayName: Borboleta cintilante
+		Tooltip: ""
+	}
+
+	WarCrate: {
+		DisplayName: Caixa de Guerra
+		Tooltip: ""
+	}
+
+	RavagedHeart: {
+		DisplayName: Coracao devastado
+		Tooltip:
+			'''
+			Aumenta a saúde em 100
+			Só pode ser usado no máximo de saúde e apenas uma vez
+			'''
+	}
+
+	HydroArrow: {
+		DisplayName: Seta Hydro
+		Tooltip: ""
+	}
+
+	HydroFury: {
+		DisplayName: Hidro Fúria
+		Tooltip: ""
+	}
+
+	AncientStaff: {
+		DisplayName: Equipe Antiga
+		Tooltip: Atira poderosas Chamas Amaldiçoadas
+	}
+
+	Ragnarok: {
+		DisplayName: Ragnarok
+		Tooltip: ""
+	}
+
+	Bloodlust: {
+		DisplayName: Bloodlust
+		Tooltip: Atira poderosas Chamas do Inferno
+	}
+
+	StaffOfTheStones: {
+		DisplayName: Equipe Das Pedras
+		Tooltip: Invoca uma pedra para ajuda-lo
+	}
+
+	IceScepter: {
+		DisplayName: Cetro de Gelo
+		Tooltip: Atira Chamas de Geada
+	}
+
+	EtherealStoneItem: {
+		DisplayName: Pedra Eterea
+		Tooltip: ""
+	}
+
+	EmberwingTrophyI: {
+		DisplayName: Trofeu Emberwing
+		Tooltip: ""
+	}
+
+	EmberwingRelicI: {
+		DisplayName: Reliquia Emberwing
+		Tooltip: ""
+	}
+
+	RiptideRavagerRelicI: {
+		DisplayName: Reliquia Riptide Ravager
+		Tooltip: ""
+	}
+
+	RiptideRavagerTrophyI: {
+		DisplayName: Trofeu Riptide Ravager
+		Tooltip: ""
+	}
+
+	MainMenuThemeDayMusicBox: {
+		DisplayName: Caixa de música do dia do tema do menu principal
+		Tooltip: ""
+	}
+
+	MainMenuThemeNightMusicBox: {
+		DisplayName: Caixa de música noturna com tema do menu principal
+		Tooltip: ""
+	}
+
+	RiptideRavagerTreasureBag: {
+		DisplayName: Saco do tesouro Riptide Ravager
+		Tooltip: ""
+	}
+
+	RavagedScale: {
+		DisplayName: Escala Devastada
+		Tooltip: Invoca Riptide Ravager. Só desova na praia.
+	}
+
+	ElementalShield: {
+		DisplayName: Escudo Elemental
+		Tooltip: Faz uma barreira elementar ao redor do jogador para proteger o jogador de danos
+	}
+
+	SpaceChestplate: {
+		DisplayName: Baú Espacial
+		Tooltip: 4% aumentam a chance de ataque crítico
+	}
+
+	SpaceHeadgear: {
+		SetBonus: Mods.TenebrousMod.Items.SpaceHeadgear.SetBonus
+		DisplayName: Espaço Chapelaria
+		Tooltip: 10% de aumento de dano mágico
+	}
+
+	SpaceLeggings: {
+		DisplayName: Leggings Espaciais
+		Tooltip:
+			'''
+			Aumento de 10% na velocidade de movimento
+			Remove danos causados por quedas
+			'''
+	}
+
+	StarEssence: {
+		DisplayName: Essência da Estrela
+		Tooltip: Gotas de inimigos do céu para fazer equipamentos estelares
+	}
+
+	StarKeeper: {
+		// DisplayName: Star Keeper
+		// Tooltip: ""
+	}
+
+	Starlight: {
+		// DisplayName: Starlight
+		// Tooltip: ""
+	}
+}
+
+Projectiles: {
+	PhotonicSerpent.DisplayName: Serpente fotonica
+	DeathLaser.DisplayName: Laser da Morte
+	GraniteWhipProj.DisplayName: Chicote de granito
+	GraniteCoreProj.DisplayName: Nucleo de granito
+	GraniteOrbProj.DisplayName: Orbe de granito
+	EmberBall.DisplayName: Bola de brasa
+	WaterGun2hell.DisplayName: Agua
+	EmberArrowProj.DisplayName: Seta Ember
+	EmberFlame.DisplayName: Chama de brasa
+	RiptideStaffProj.DisplayName: Equipe Riptide
+	RiptideStaffProj2.DisplayName: Equipe Riptide
+	EmberBallFriendly.DisplayName: Bola de brasa
+	BoneBladeProj.DisplayName: Lamina de osso
+	HydroArrowProj.DisplayName: Seta Hydro
+	HydroArrowProj2.DisplayName: Seta Hydro
+	StoneProj.DisplayName: Pedra
+	WaterArrow.DisplayName: Seta d'agua
+	// Star.DisplayName: Star
+}
+
+NPCs: {
+	Emberwing.DisplayName: Emberwing
+	RiptideRavager.DisplayName: Riptide Ravager
+	ShimmerButterfly.DisplayName: Borboleta cintilante
+	// StarSlime.DisplayName: Star Slime
+	// AngelEye.DisplayName: Angel Eye
+	// TheGreatHarpy.DisplayName: The Great Harpy
+}
+
+Buffs: {
+	Infuriated: {
+		DisplayName: Enfureceu
+		Description: A defesa diminuiu 10% e o dano aumentou 10%.
+	}
+
+	Empowered: {
+		DisplayName: Autorizado
+		Description: Defesa aumentou em 5 e Dano aumentou em 10%
+	}
+
+	InternalImploding: {
+		DisplayName: Implosao interna
+		Description: Danos e Defesa diminuíram 20%
+	}
+
+	RavagedRiptide: {
+		DisplayName: Riptide Devastada
+		Description: Mods.TenebrousMod.Buffs.RavagedRiptide.Description
+	}
+}
+
+Tiles: {
+	MainMenuThemeMusicBoxTile.MapEntry: Main Menu Theme Music Box
+	MainMenuThemeDayMusicBoxTile.MapEntry: Caixa de música do dia do tema do menu principal
+	MainMenuThemeNightMusicBoxTile.MapEntry: Caixa de música noturna com tema do menu principal
+	// WarCrateTile.MapEntry: War Crate Tile
+}

@@ -2,6 +2,7 @@
 using System.Transactions;
 using TenebrousMod.NPCs.Bosses.Emberwing;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -9,6 +10,10 @@ namespace TenebrousMod.Items.Weapons.Mage
 {
     public class Bloodlust : ModItem
     {
+        public override void SetStaticDefaults()
+        {
+            Item.staff[Item.type] = true;
+        }
         public override void SetDefaults()
         {
             int projectile = ProjectileID.InfernoFriendlyBolt;
@@ -25,6 +30,7 @@ namespace TenebrousMod.Items.Weapons.Mage
             Item.value = Item.sellPrice(gold: 2, silver: 50);
             Item.rare = ItemRarityID.Blue;
             Item.UseSound = SoundID.Item71;
+
             Item.autoReuse = true;
             Item.shoot = projectile;
             Item.shootSpeed = 3f;

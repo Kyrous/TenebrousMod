@@ -6,6 +6,11 @@ namespace TenebrousMod.Items.Weapons.Mage
 {
     public class IceScepter : ModItem
     {
+
+        public override void SetStaticDefaults()
+        {
+            Item.staff[Item.type] = true;
+        }
         public override void SetDefaults()
         {
             Item.damage = 7;

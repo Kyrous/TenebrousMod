@@ -12,7 +12,7 @@ namespace TenebrousMod.Items.Weapons.Mage
         {
             Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(5, 7));
             ItemID.Sets.AnimatesAsSoul[Item.type] = true;
-
+            Item.staff[Item.type] = true;
             Item.color = Color.White;
         }
         public override void SetDefaults()
@@ -32,6 +32,7 @@ namespace TenebrousMod.Items.Weapons.Mage
             Item.UseSound = SoundID.Item71;
             Item.autoReuse = true;
             Item.shoot = ProjectileID.CursedFlameFriendly;
+
             Item.shootSpeed = 11f;
         }
     }

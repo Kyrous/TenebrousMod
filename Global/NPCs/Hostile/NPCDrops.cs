@@ -1,4 +1,5 @@
-﻿using TenebrousMod.Items.Food;
+﻿using TenebrousMod.Items.Accessories;
+using TenebrousMod.Items.Food;
 using TenebrousMod.Items.Materials;
 using TenebrousMod.Items.Weapons.Mage;
 using TenebrousMod.Items.Weapons.Melee;
@@ -224,6 +225,17 @@ namespace TenebrousMod.Global.NPCs.Hostile
                 {
                     npcLoot.Add(ItemDropRule.Common(ItemID.LifeCrystal, 150, 1, 2));
                 }
+            }
+            if (npc.type == NPCID.Harpy)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ElementalShield>(), 50, 1, 1));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<StarEssence>(), 2, 1, 1));
+
+            }
+            if (npc.type == NPCID.WyvernHead)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ElementalShield>(), 50, 1, 1));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<StarEssence>(), 2, 1, 1));
             }
         }
     }

@@ -6,10 +6,14 @@ using Microsoft.Xna.Framework;
 using Terraria.GameContent.ItemDropRules;
 using TenebrousMod.Items.Weapons.Melee;
 using TenebrousMod.Items.Bars;
-using TenebrousMod.Items.Placeable.Furniture;
 using Terraria.Graphics.CameraModifiers;
 using TenebrousMod.Items.TreasureBags;
 using TenebrousMod.Buffs;
+using Terraria.GameContent.Bestiary;
+using TenebrousMod.Items.Weapons.Ranger;
+using TenebrousMod.Items.Weapons.Summoner;
+using TenebrousMod.Items.Placeable.Furniture.Relic;
+using TenebrousMod.Items.Placeable.Furniture.Trophy;
 
 namespace TenebrousMod.NPCs.Bosses.Emberwing
 {
@@ -64,17 +68,21 @@ namespace TenebrousMod.NPCs.Bosses.Emberwing
         }
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            // FIXME: these are incorrect, should have different conditions instead 
-            if (Main.expertMode && !Main.masterMode)
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberwingTreasureBag>(), 1));
-            if (Main.masterMode)
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberwingTreasureBag>(), 1));
-            else
+            if (Main.expertMode) npcLoot.Add(ItemDropRule.BossBag(ModContent.ItemType<EmberwingTreasureBag>()));
+            if (!Main.expertMode)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberwingTrophyI>(), 10));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberScythe>(), 2));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TheGreatEmber>(), 4));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberWarAxe>(), 3));
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberScythe>(), 2));
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TheGreatEmber>(), 4));
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberwingTrophyI>(), 10));
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ObscurumBar>(), 1, 24, 36));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ObscurumBar>(), 1, 24, 36));
+            }
+            npcLoot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<EmberwingRelicI>()));
+            //npcLoot.Add(ItemDropRule.MasterModeDropOnAllPlayers(ModContent.ItemType<MinionBossPetItem>(), 4));
+            LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());
+            //notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<MinionBossMask>(), 7));
+
+            npcLoot.Add(notExpertRule);
         }
         public override void BossLoot(ref string name, ref int potionType)
         {
@@ -90,6 +98,20 @@ namespace TenebrousMod.NPCs.Bosses.Emberwing
             npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberScythe>(), 1));
             npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TheGreatEmber>(), 2));
             */
+        }
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            // We can use AddRange instead of calling Add multiple times in order to add multiple items at once
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[] {
+				// Sets the preferred biomes of this town NPC listed in the bestiary.
+				// With Town NPCs, you usually set this to what biome it likes the most in regards to NPC happiness.
+				BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheUnderworld,
+				// Sets your NPC's flavor text in the bestiary.
+                new MoonLordPortraitBackgroundProviderBestiaryInfoElement(),
+                new FlavorTextBestiaryInfoElement("Emberwing, a majestic phoenix, was originally a creature of light and purity, associated with Virlina's blessings. However, Sinorus corrupted Emberwing's essence, turning it into a fiery harbinger of destruction. Now, it soars through the underworld, leaving trails of flames in anyone who gets in its way."),
+            });
+
+
         }
         public override void AI()
         {
@@ -156,27 +178,6 @@ namespace TenebrousMod.NPCs.Bosses.Emberwing
                 }
             }
         }
-        private void lookAtPlayer(NPC npc, Player player)
-        {
-
-            if (npc.Center.X > player.Center.X)
-            {
-                npc.direction = -1;
-            }
-            else
-            {
-                npc.direction = 1;
-            }
-
-            if (npc.Center.X > player.Center.X)
-            {
-                npc.direction = -2;
-            }
-            else
-            {
-                npc.direction = 2;
-            }
-        }
         private bool checkTowardsPlayerX(Player player, Vector2 off)
         {
             float target = player.Center.X + off.X;
@@ -212,7 +213,7 @@ namespace TenebrousMod.NPCs.Bosses.Emberwing
             offset = Vector2.Zero;
             NPC npc = NPC;
             Player player = Main.player[NPC.target];
-            lookAtPlayer(npc, player);
+            NPC.FaceTarget();
             npc.velocity.X += 0.1f * npc.direction;
             if (!checkTowardsPlayerX(player, offset))
             {

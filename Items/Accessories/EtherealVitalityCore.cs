@@ -8,8 +8,8 @@ namespace TenebrousMod.Items.Accessories
     {
         public override void SetDefaults()
         {
-            Item.width = 30;
-            Item.height = 34;
+            Item.width = 68;
+            Item.height = 42;
             Item.value = Item.sellPrice(gold: 8);
             Item.rare = ItemRarityID.LightRed;
             Item.defense = 4;

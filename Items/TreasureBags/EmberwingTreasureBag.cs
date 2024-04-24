@@ -2,7 +2,8 @@
 using Microsoft.Xna.Framework.Graphics;
 using TenebrousMod.Items.Accessories;
 using TenebrousMod.Items.Bars;
-using TenebrousMod.Items.Placeable.Furniture;
+using TenebrousMod.Items.Placeable.Furniture.Relic;
+using TenebrousMod.Items.Placeable.Furniture.Trophy;
 using TenebrousMod.Items.Weapons.Melee;
 using TenebrousMod.TenebrousModSystem;
 using Terraria;

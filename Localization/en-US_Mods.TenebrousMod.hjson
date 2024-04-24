@@ -27,7 +27,7 @@ Items: {
 
 	PhotonBlade: {
 		DisplayName: Photon Blade
-		Tooltip: Charged with lightning. If the Lightning stikes the enemy, you get an aura of spikes around you.
+		Tooltip: Charged with lightning. If the Lightning strikes the enemy, you get an aura of spikes around you.
 	}
 
 	ObscurumBar: {
@@ -302,7 +302,7 @@ Items: {
 
 	IceScepter: {
 		DisplayName: Ice Scepter
-		Tooltip: ""
+		Tooltip: Shoots Frost Flames
 	}
 
 	EtherealStoneItem: {
@@ -344,6 +344,51 @@ Items: {
 		DisplayName: Riptide Ravager Treasure Bag
 		Tooltip: ""
 	}
+
+	RavagedScale: {
+		DisplayName: Ravaged Scale
+		Tooltip: Summons Riptide Ravager. Only spawns in the Beach.
+	}
+
+	ElementalShield: {
+		DisplayName: Elemental Shield
+		Tooltip: Makes an elemental barrier around the player to protect the player from damage
+	}
+
+	SpaceChestplate: {
+		DisplayName: Space Chestplate
+		Tooltip: 4% increase critical strike chance
+	}
+
+	SpaceHeadgear: {
+		SetBonus: Mods.TenebrousMod.Items.SpaceHeadgear.SetBonus
+		DisplayName: Space Headgear
+		Tooltip: 10% increased Magic Damage
+	}
+
+	SpaceLeggings: {
+		DisplayName: Space Leggings
+		Tooltip:
+			'''
+			10% movement speed increase
+			Removes fall damage
+			'''
+	}
+
+	StarEssence: {
+		DisplayName: Star Essence
+		Tooltip: Drops from sky enemies to make star gear
+	}
+
+	StarKeeper: {
+		DisplayName: Star Keeper
+		Tooltip: ""
+	}
+
+	Starlight: {
+		DisplayName: Starlight
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -364,12 +409,16 @@ Projectiles: {
 	HydroArrowProj2.DisplayName: Hydro Arrow
 	StoneProj.DisplayName: Stone
 	WaterArrow.DisplayName: Water Arrow
+	Star.DisplayName: Star
 }
 
 NPCs: {
 	Emberwing.DisplayName: Emberwing
 	RiptideRavager.DisplayName: Riptide Ravager
 	ShimmerButterfly.DisplayName: Shimmer Butterfly
+	StarSlime.DisplayName: Star Slime
+	AngelEye.DisplayName: Angel Eye
+	TheGreatHarpy.DisplayName: The Great Harpy
 }
 
 Buffs: {
@@ -387,10 +436,16 @@ Buffs: {
 		DisplayName: Internal Imploding
 		Description: Damage and Defense decreased by 20%
 	}
+
+	RavagedRiptide: {
+		DisplayName: Ravaged Riptide
+		Description: Mods.TenebrousMod.Buffs.RavagedRiptide.Description
+	}
 }
 
 Tiles: {
 	MainMenuThemeMusicBoxTile.MapEntry: Main Menu Theme Music Box
 	MainMenuThemeDayMusicBoxTile.MapEntry: Main Menu Theme Day Music Box Tile
 	MainMenuThemeNightMusicBoxTile.MapEntry: Main Menu Theme Night Music Box Tile
+	WarCrateTile.MapEntry: War Crate Tile
 }

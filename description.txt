@@ -5,8 +5,7 @@ This Mod is on beta and is not fully yet done. (There are some placeholder stuff
 On version v0.6... We should all expect it to be ready for playthroughs.
 Also bugs and suggestions would be really helpful!
 
-Tenebrous Mod is a spaced themed mod that adds more combat, more bosses, more buffs, more accessories, more armor, more weapons, and makes Terraria harder.
-This Mod has had some early versions -- Which were very terrible -- that are in 1.3, but this is the real version.
+Tenebrous Mod is a spaced themed mod that adds more combat, more bosses, more enemies, more buffs, more accessories, more armor, more weapons, and makes Terraria harder.
 
 Tenebrous Mod's world named Sagani was a perfect place with no doubts or bad judgements. 
 Everything was perfect till Sinorus's jealousy got out of hand.
@@ -26,13 +25,15 @@ There will be more content added for the story later on in the mod... Not all th
 
 Content:
 2 Boss(s)
-0 Enemie(s)
+4 Enemie(s)
 1 Critter(s)
-3 Buff(s)
+4 Buff(s)
 8 Tile(s)
-58 item(s)
+59 item(s)
 
 Localization:
 English
-
-I plan on adding Portuguese later on.
+Spanish
+Portuguese
+French
+Russian

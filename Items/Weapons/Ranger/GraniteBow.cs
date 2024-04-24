@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using TenebrousMod.Items.Materials;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -22,6 +23,14 @@ namespace TenebrousMod.Items.Weapons.Ranger
             Item.useTime = 20;
             Item.shoot = ProjectileID.HellfireArrow;
             Item.UseSound = SoundID.Item5;
+        }
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient(ItemID.Granite, 18)
+                .AddIngredient<GraniteShard>(1)
+                .AddTile(TileID.Anvils)
+                .Register();
         }
     }
 }

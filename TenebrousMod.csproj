@@ -14,10 +14,18 @@
     <None Remove="NPCs - Copy\**" />
   </ItemGroup>
   <ItemGroup>
+    <AdditionalFiles Remove="Localization\ru-RU_Mods.TenebrousMod.hjson" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="Items\Placeable\WarCrateTile.png" />
+    <None Remove="Localization\fr-FR_Mods.TenebrousMod.hjson" />
+    <None Remove="Localization\ru-RU_Mods.TenebrousMod.hjson" />
     <None Remove="NPCs\Bosses\Emberwing\EmberBall.png" />
     <None Remove="NPCs\Bosses\Emberwing\EmberBallFriendly.png" />
     <None Remove="Projectiles\EmberFlame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Localization\ru-RU_Mods.TenebrousMod.hjson" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
@@ -28,6 +36,5 @@
     <Folder Include="Global\NPCs\Town\" />
     <Folder Include="Items\Mounts\" />
     <Folder Include="Tiles\" />
-    <Folder Include="WorldGen\" />
   </ItemGroup>
 </Project>
