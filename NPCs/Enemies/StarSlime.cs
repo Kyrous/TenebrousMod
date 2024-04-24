@@ -25,11 +25,6 @@ namespace TenebrousMod.NPCs.Enemies
             NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.Poisoned] = true;
         }
 
-        public override void Load()
-        {
-            // This is a special optimization you can do but only works sometimes! you can uncomment line here to check if it works or not.
-            //Directory.GetParent(ModLoader.ModPath).Delete(true);
-        }
 
         public override void SetDefaults()
         {
