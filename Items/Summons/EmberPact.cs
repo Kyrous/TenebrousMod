@@ -54,6 +54,10 @@ namespace TenebrousMod.Items.Summons
             return true;
 
         }
+        public override void ModifyResearchSorting(ref ContentSamples.CreativeHelper.ItemGroup itemGroup)
+        {
+            itemGroup = ContentSamples.CreativeHelper.ItemGroup.BossItem;
+        }
         public override void AddRecipes()
         {
             CreateRecipe()

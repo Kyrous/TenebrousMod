@@ -6,8 +6,7 @@ using Terraria.ObjectData;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.Localization;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using TenebrousMod.Items.Weapons.Ranger;
+using TenebrousMod.Items.Weapons.Ocean;
 
 namespace TenebrousMod.Items.Placeable
 {

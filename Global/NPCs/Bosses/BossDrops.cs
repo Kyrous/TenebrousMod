@@ -1,4 +1,7 @@
-﻿using TenebrousMod.Items.Weapons.Melee;
+﻿using TenebrousMod.Items.Weapons.EOC;
+using TenebrousMod.Items.Weapons.Emberwing;
+using TenebrousMod.Items.Weapons.Skeletron;
+using TenebrousMod.Items.Weapons.WOF;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;

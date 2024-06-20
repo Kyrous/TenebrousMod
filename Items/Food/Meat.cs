@@ -12,7 +12,7 @@ namespace TenebrousMod.Items.Food
             Item.maxStack = 30;
             Item.value = Item.sellPrice(silver: 5);
             Item.consumable = true;
-            Item.rare = ItemRarityID.LightPurple;
+            Item.rare = ItemRarityID.Blue;
         }
         public override void OnConsumeItem(Player player)
         {

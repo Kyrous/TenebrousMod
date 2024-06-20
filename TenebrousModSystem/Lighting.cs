@@ -8,9 +8,9 @@ namespace TenebrousMod.TenebrousModSystem
 {
     public static class WeaponLighting 
     {
-       //
-       //Summary:
-       //LightAmount is how much light there will be.
+        /// <summary>
+        /// LightAmount is how much light there will be.
+        /// </summary>
         public static bool LightingOnGround(Item Item, int LightAmount, SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
         {
             Lighting.AddLight(Item.Center, Color.White.ToVector3() * LightAmount);

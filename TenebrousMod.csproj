@@ -8,9 +8,17 @@
     <LangVersion>10</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <AdditionalFiles Remove="Items\Mounts\**" />
+    <AdditionalFiles Remove="Localization\ru-RU\**" />
     <AdditionalFiles Remove="NPCs - Copy\**" />
+    <Compile Remove="Items\Mounts\**" />
+    <Compile Remove="Localization\ru-RU\**" />
     <Compile Remove="NPCs - Copy\**" />
+    <EmbeddedResource Remove="Items\Mounts\**" />
+    <EmbeddedResource Remove="Localization\ru-RU\**" />
     <EmbeddedResource Remove="NPCs - Copy\**" />
+    <None Remove="Items\Mounts\**" />
+    <None Remove="Localization\ru-RU\**" />
     <None Remove="NPCs - Copy\**" />
   </ItemGroup>
   <ItemGroup>
@@ -18,14 +26,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Items\Placeable\WarCrateTile.png" />
+    <None Remove="Localization\en-US\Mods.TenebrousMod.BossChecklistIntegration.hjson" />
     <None Remove="Localization\fr-FR_Mods.TenebrousMod.hjson" />
     <None Remove="Localization\ru-RU_Mods.TenebrousMod.hjson" />
     <None Remove="NPCs\Bosses\Emberwing\EmberBall.png" />
     <None Remove="NPCs\Bosses\Emberwing\EmberBallFriendly.png" />
     <None Remove="Projectiles\EmberFlame.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Localization\ru-RU_Mods.TenebrousMod.hjson" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
@@ -34,7 +40,6 @@
     <Folder Include="Backgrounds\" />
     <Folder Include="Biomes\" />
     <Folder Include="Global\NPCs\Town\" />
-    <Folder Include="Items\Mounts\" />
     <Folder Include="Tiles\" />
   </ItemGroup>
 </Project>

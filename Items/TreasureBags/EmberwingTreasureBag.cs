@@ -4,7 +4,7 @@ using TenebrousMod.Items.Accessories;
 using TenebrousMod.Items.Bars;
 using TenebrousMod.Items.Placeable.Furniture.Relic;
 using TenebrousMod.Items.Placeable.Furniture.Trophy;
-using TenebrousMod.Items.Weapons.Melee;
+using TenebrousMod.Items.Weapons.Emberwing;
 using TenebrousMod.TenebrousModSystem;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;

@@ -18,8 +18,8 @@ namespace TenebrousMod.Items.Placeable.Furniture.Relic
         {
             Item.DefaultToPlaceableTile(ModContent.TileType<EmberwingRelic>(), 0);
 
-            Item.width = 30;
-            Item.height = 40;
+            Item.width = 48;
+            Item.height = 64;
             Item.rare = ItemRarityID.Master;
             Item.master = true;
             Item.value = Item.buyPrice(0, 5);
@@ -34,9 +34,9 @@ namespace TenebrousMod.Items.Placeable.Furniture.Relic
 
         public Asset<Texture2D> RelicTexture;
 
-        public virtual string RelicTextureName => "TenebrousMod/Items/Placeable/Furniture/EmberwingRelic";
+        public virtual string RelicTextureName => "TenebrousMod/Items/Placeable/Furniture/Relic/EmberwingRelic";
 
-        public override string Texture => "TenebrousMod/Items/Placeable/Furniture/EmberwingRelicPed";
+        public override string Texture => "TenebrousMod/Items/Placeable/Furniture/Relic/RelicPed";
 
         public override void Load()
         {

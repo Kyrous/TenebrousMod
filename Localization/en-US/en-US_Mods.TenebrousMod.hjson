@@ -1,0 +1,609 @@
+Configs: {
+	Config: {
+		SupremacyMode: {
+			Tooltip: A whole nother difficulty for experts!
+			Label: Supremacy Mode
+		}
+
+		Headers: {
+			Items: Items Header
+			GeneralGameplay: General Gameplay
+		}
+
+		DisplayName: Config
+	}
+}
+
+Items: {
+	StarterBag: {
+		Tooltip: The start of the Gloomy Journey!
+		DisplayName: Starter Bag
+	}
+
+	Meat: {
+		DisplayName: Meat
+		Tooltip: Heals the player by 5
+	}
+
+	PhotonBlade: {
+		DisplayName: Photon Blade
+		Tooltip: Charged with lightning. If the Lightning strikes the enemy, you get an aura of spikes around you.
+	}
+
+	ObscurumBar: {
+		DisplayName: Obscurum Bar
+		Tooltip: The needed material to make Obscurum and Ember gear
+	}
+
+	Trisma: {
+		DisplayName: Trisma
+		Tooltip: ""
+	}
+
+	TheGreatGranite: {
+		DisplayName: The Great Granite
+		Tooltip: ""
+	}
+
+	GraniteAxe: {
+		DisplayName: Granite Axe
+		Tooltip: ""
+	}
+
+	GraniteHammer: {
+		DisplayName: Granite Hammer
+		Tooltip: ""
+	}
+
+	GranitePickaxe: {
+		DisplayName: Granite Pickaxe
+		Tooltip: ""
+	}
+
+	GraniteBlade: {
+		DisplayName: Granite Blade
+		Tooltip: ""
+	}
+
+	GraniteWhip: {
+		DisplayName: Granite Whip
+		Tooltip: ""
+	}
+
+	GraniteCore: {
+		DisplayName: Granite Core
+		Tooltip: ""
+	}
+
+	GraniteBlaster: {
+		DisplayName: Granite Blaster
+		Tooltip: ""
+	}
+
+	GraniteShard: {
+		DisplayName: Granite Shard
+		Tooltip: The needed material to make Granite gear
+	}
+
+	GraniteStaff: {
+		DisplayName: Granite Staff
+		Tooltip: Shoots Granite Orbs.
+	}
+
+	ObsidianShell: {
+		DisplayName: Obsidian Shell
+		Tooltip: Increases life regen and defense on half health
+	}
+
+	GraniteEmblem: {
+		DisplayName: Granite Emblem
+		Tooltip: ""
+	}
+
+	EmberScythe: {
+		DisplayName: Ember Scythe
+		Tooltip: Shoots Homing Ember Flames
+	}
+
+	EmberBlade: {
+		DisplayName: Ember Blade
+		Tooltip: Shoots an Ember Flame
+	}
+
+	GraniteBow: {
+		DisplayName: Granite Bow
+		Tooltip: Turns wood arrows into granite arrows
+	}
+
+	Riptide: {
+		DisplayName: Riptide
+		Tooltip: ""
+	}
+
+	TheGreatEmber: {
+		DisplayName: The Great Ember
+		Tooltip: Charge up the sword by swinging it and then when you stop swinging it. it releases Homing Ember Flames
+	}
+
+	EtherealVitalityCore: {
+		Tooltip:
+			'''
+			Defense increased by 4 and Melee Damage increased by 5% while in the Granite Biome
+			All Damage increased by 10%
+			'''
+		DisplayName: Ethereal Vitality Core
+	}
+
+	EtherealEmblem: {
+		Tooltip: All damage increased by 5%
+		DisplayName: Ethereal Emblem
+	}
+
+	BoneBlade: {
+		DisplayName: Bone Blade
+		Tooltip: Drops from Skeletron
+	}
+
+	Eyesore: {
+		DisplayName: Eyesore
+		Tooltip: Drops from EOC
+	}
+
+	RiptideBow: {
+		DisplayName: Riptide Bow
+		Tooltip: Turns any wooden arrows into a water arrow.
+	}
+
+	EmberWarAxe: {
+		DisplayName: Ember Waraxe
+		Tooltip: ""
+	}
+
+	EmberArrow: {
+		DisplayName: Ember Arrow
+		Tooltip: Inflicts a fire burn to any enemy it hits.
+	}
+
+	EmberBow: {
+		DisplayName: Ember Bow
+		Tooltip: Turns all arrow types into flame arrows
+	}
+
+	ObscurumGlove: {
+		Tooltip:
+			'''
+			All damage increased by 7% and Defense decreased by 4
+			While on 25% of your health, your defense goes up by 8 and your damage goes up by 10%
+			10% increased critical strike chance
+			'''
+		DisplayName: Obscurum Glove
+	}
+
+	ObscurumPlate: {
+		DisplayName: Obscurum Plate
+		Tooltip:
+			'''
+			Critical Strike Chance increased by 8%
+			Gives Immunity to lava or any form of fire
+			Gives you the Inferno buff when on 25% Health
+			'''
+	}
+
+	ObscurumHelmetMelee: {
+		SetBonus: Mods.TenebrousMod.Items.ObscurumHelmetMelee.SetBonus
+		DisplayName: Obscurum Helmet
+		Tooltip: Increases Melee Damage by 5%
+	}
+
+	ObscurumHoodMage: {
+		SetBonus: Mods.TenebrousMod.Items.ObscurumHoodMage.SetBonus
+		DisplayName: Obscurum Hood
+		Tooltip: Increases Magic Damage by 5%
+	}
+
+	ObscurumMaskSummoner: {
+		SetBonus: Mods.TenebrousMod.Items.ObscurumMaskSummoner.SetBonus
+		DisplayName: Obscurum Mask
+		Tooltip: Increases Summoner Damage by 5%
+	}
+
+	ObscurumHeadgearRanger: {
+		SetBonus: Mods.TenebrousMod.Items.ObscurumHeadgearRanger.SetBonus
+		DisplayName: Obscurum Headgear
+		Tooltip: Increases Ranged Damage by 5%
+	}
+
+	ObscurumGreaves: {
+		DisplayName: Obscurum Greaves
+		Tooltip:
+			'''
+			Increases movement by 10%
+			Allows movement over water and lava
+			'''
+	}
+
+	EmberwingTreasureBag: {
+		DisplayName: Emberwing Treasure Bag
+		Tooltip: ""
+	}
+
+	ObscurumWings: {
+		DisplayName: Obscurum Wings
+		Tooltip: ""
+	}
+
+	RiptideStaff: {
+		DisplayName: Riptide Staff
+		Tooltip: Summons a mini Riptide Ravager to help fight for you
+	}
+
+	EmberPact: {
+		Tooltip:
+			'''
+			Summons Emberwing
+			Can only be used when you have defeated plantera and when you are in the underworld
+			'''
+		DisplayName: Ember Pact
+	}
+
+	MainMenuThemeMusicBox: {
+		Tooltip: ""
+		DisplayName: Main Menu Theme Music Box
+	}
+
+	ShimmerButterflyItem: {
+		DisplayName: Shimmer Butterfly
+		Tooltip: ""
+	}
+
+	WarCrate: {
+		DisplayName: War Crate
+		Tooltip: ""
+	}
+
+	RavagedHeart: {
+		DisplayName: Ravaged Heart
+		Tooltip:
+			'''
+			Increases Health by 100
+			Can only be used at max health and only once
+			'''
+	}
+
+	HydroArrow: {
+		DisplayName: Hydro Arrow
+		Tooltip: ""
+	}
+
+	HydroFury: {
+		DisplayName: Hydro Fury
+		Tooltip: ""
+	}
+
+	AncientStaff: {
+		DisplayName: Ancient Staff
+		Tooltip: Shoots powerful Cursed Flames
+	}
+
+	Ragnarok: {
+		DisplayName: Ragnarok
+		Tooltip: ""
+	}
+
+	Bloodlust: {
+		DisplayName: Bloodlust
+		Tooltip: Shoots powerful Inferno Flames
+	}
+
+	StaffOfTheStones: {
+		DisplayName: Staff Of The Stones
+		Tooltip: Summons a stone to help you
+	}
+
+	IceScepter: {
+		DisplayName: Ice Scepter
+		Tooltip: Shoots Frost Flames
+	}
+
+	EtherealStoneItem: {
+		DisplayName: Ethereal Stone
+		Tooltip: ""
+	}
+
+	EmberwingTrophyI: {
+		DisplayName: Emberwing Trophy
+		Tooltip: ""
+	}
+
+	EmberwingRelicI: {
+		DisplayName: Emberwing Relic
+		Tooltip: ""
+	}
+
+	RiptideRavagerRelicI: {
+		DisplayName: Riptide Ravager Relic
+		Tooltip: ""
+	}
+
+	RiptideRavagerTrophyI: {
+		DisplayName: Riptide Ravager Trophy
+		Tooltip: ""
+	}
+
+	MainMenuThemeDayMusicBox: {
+		DisplayName: Main Menu Theme Day Music Box
+		Tooltip: ""
+	}
+
+	MainMenuThemeNightMusicBox: {
+		DisplayName: Main Menu Theme Night Music Box
+		Tooltip: ""
+	}
+
+	RiptideRavagerTreasureBag: {
+		DisplayName: Riptide Ravager Treasure Bag
+		Tooltip: ""
+	}
+
+	RavagedScale: {
+		DisplayName: Ravaged Scale
+		Tooltip: Summons Riptide Ravager. Only spawns in the Beach.
+	}
+
+	SpaceChestplate: {
+		DisplayName: Space Chestplate
+		Tooltip: 4% increase critical strike chance
+	}
+
+	SpaceHeadgear: {
+		SetBonus: Mods.TenebrousMod.Items.SpaceHeadgear.SetBonus
+		DisplayName: Space Headgear
+		Tooltip: 10% increased Magic Damage
+	}
+
+	SpaceLeggings: {
+		DisplayName: Space Leggings
+		Tooltip:
+			'''
+			10% movement speed increase
+			Removes fall damage
+			'''
+	}
+
+	StarEssence: {
+		DisplayName: Star Essence
+		Tooltip: Drops from sky enemies to make star gear
+	}
+
+	StarKeeper: {
+		DisplayName: Star Keeper
+		Tooltip: ""
+	}
+
+	Starlight: {
+		DisplayName: Starlight
+		Tooltip: ""
+	}
+
+	WingedYoyo: {
+		DisplayName: Winged Yoyo
+		Tooltip: ""
+	}
+
+	FeatherFan: {
+		DisplayName: Feather Fan
+		Tooltip: ""
+	}
+
+	FeatherStorm: {
+		DisplayName: Feather Storm
+		Tooltip: ""
+	}
+
+	WingedJavelin: {
+		DisplayName: Winged Javelin
+		Tooltip: ""
+	}
+
+	SpaceDiadem: {
+		DisplayName: Space Diadem
+		Tooltip: 10% increased Summoner Damage
+	}
+
+	SpaceHelmet: {
+		DisplayName: Space Helmet
+		Tooltip: 10% increased Melee Damage
+	}
+
+	SpaceMask: {
+		DisplayName: Space Mask
+		Tooltip: 10% increased Ranged Damage
+	}
+
+	BlunderBuss: {
+		DisplayName: Blunder Buss
+		Tooltip: ""
+	}
+
+	WizenedGlave: {
+		DisplayName: Wizened Glave
+		Tooltip: ""
+	}
+
+	TheBehemothsBreastplate: {
+		DisplayName: The Behemoth's Breastplate
+		Tooltip: ""
+	}
+
+	TheBehemothsGreaves: {
+		DisplayName: The Behemoth's Greaves
+		Tooltip: ""
+	}
+
+	TheBehemothsHeadgear: {
+		DisplayName: The Behemoth's Headgear
+		Tooltip: ""
+	}
+
+	TheBehemothsHelmet: {
+		DisplayName: The Behemoth's Helmet
+		Tooltip: ""
+	}
+
+	TheBehemothsBar: {
+		DisplayName: The Behemoth's Bar
+		Tooltip: ""
+	}
+
+	SecretMusicBoxOne: {
+		DisplayName: Secret Music Box One
+		Tooltip: "(Ancient Tenebrous Mod OST) Cataclyst Theme by Sagittarius "
+	}
+
+	SecretMusicBoxFour: {
+		DisplayName: Secret Music Box Four
+		Tooltip: (Ancient Tenebrous Mod OST) Spore Screecher Theme by Sagittarius
+	}
+
+	SecretMusicBoxThree: {
+		DisplayName: Secret Music Box Three
+		Tooltip: (Ancient Tenebrous Mod OST) Old Main Menu Theme by Sagittarius
+	}
+
+	SecretMusicBoxTwo: {
+		DisplayName: Secret Music Box Two
+		Tooltip: (Ancient Tenebrous Mod OST) Dark Flow Theme by Sagittarius
+	}
+
+	DominicsLostBlade: {
+		DisplayName: Dominic's Lost Blade
+		Tooltip: ""
+	}
+
+	ElementalBreaker: {
+		Tooltip: If the player is on 25% health, the player's defense will go up by 4 and the player can move faster
+		DisplayName: Elemental Breaker
+	}
+
+	BatteryJuice: {
+		DisplayName: Battery Juice
+		Tooltip: Heals the player by 10
+	}
+
+	IcerusMusicBox: {
+		DisplayName: Icerus Music Box
+		Tooltip: ""
+	}
+
+	FrozenMoral: {
+		DisplayName: Frozen Moral
+		Tooltip:
+			'''
+			Summons Icerus
+			Can only be used when you have defeated Wall of Flesh and you are in the Snow biome.
+			'''
+	}
+
+	IcerusRelicI: {
+		DisplayName: Icerus Relic
+		Tooltip: ""
+	}
+
+	DominicsHorizon: {
+		DisplayName: Dominic's Horizon
+		Tooltip: Shoots Giant Ice Balls
+	}
+}
+
+Projectiles: {
+	PhotonicSerpent.DisplayName: Photonic Serpent
+	DeathLaser.DisplayName: Death Laser
+	GraniteWhipProj.DisplayName: Granite Whip
+	GraniteCoreProj.DisplayName: Granite Core
+	GraniteOrbProj.DisplayName: Granite Orb
+	EmberBall.DisplayName: Ember Ball
+	WaterGun2hell.DisplayName: Water
+	EmberArrowProj.DisplayName: Ember Arrow
+	EmberFlame.DisplayName: Ember Flame
+	RiptideStaffProj.DisplayName: Riptide Staff
+	RiptideStaffProj2.DisplayName: Riptide Staff
+	EmberBallFriendly.DisplayName: Ember Ball
+	BoneBladeProj.DisplayName: Bone Blade
+	HydroArrowProj.DisplayName: Hydro Arrow
+	HydroArrowProj2.DisplayName: Hydro Arrow
+	StoneProj.DisplayName: Stone
+	WaterArrow.DisplayName: Water Arrow
+	Star.DisplayName: Star
+	DesertBehemothProjectile.DisplayName: Desert Behemoth
+	DesertBehemothIndicatorProj.DisplayName: Desert Behemoth
+	IceIndicatorProj.DisplayName: Ice
+	WingedYoyoFeathers.DisplayName: Winged Yoyo Feathers
+	WingedYoyoProjectile.DisplayName: Winged Yoyo
+	FeatherFanMinion.DisplayName: Feather Fan
+	FeatherStormProjectile.DisplayName: Feather Storm
+	WingedJavelinProj.DisplayName: Winged Javelin
+	GraniteSlash.DisplayName: Granite Slash
+	BlunderbussHeldProjectile.DisplayName: Blunderbuss
+	BlunderbussProjectile.DisplayName: Blunderbuss
+	GlaveHeldProjectile.DisplayName: Glave Held
+	WizenedGlaveProjectile.DisplayName: Wizened Glave
+	Swordsmachine.DisplayName: Swordsmachine
+	horizonLingerProj.DisplayName: Lingering Horizon
+	HorizonProj.DisplayName: Horizon's Ice Shot
+	miniIceProj.DisplayName: Ice
+	iceSlash.DisplayName: ice Slash
+}
+
+NPCs: {
+	Emberwing.DisplayName: Emberwing
+	RiptideRavager.DisplayName: Riptide Ravager
+	ShimmerButterfly.DisplayName: Shimmer Butterfly
+	StarSlime.DisplayName: Star Slime
+	AngelEye.DisplayName: Angel Eye
+	TheGreatHarpy.DisplayName: The Great Harpy
+	TheBehemoth.DisplayName: The Behemoth
+	IcerusBossBody.DisplayName: Icerus
+	IcerusBossHead.DisplayName: Icerus
+	IcerusBossTail.DisplayName: Icerus
+	DesertBehemoth.DisplayName: The Behemoth
+	Swordsman.DisplayName: Swordsman
+}
+
+Buffs: {
+	Infuriated: {
+		DisplayName: Infuriated
+		Description: Defense decreased by 10% and Damage increased by 10%.
+	}
+
+	Empowered: {
+		DisplayName: Empowered
+		Description: Defense increased by 5 and Damage increased by 10%
+	}
+
+	InternalImploding: {
+		DisplayName: Internal Imploding
+		Description: Damage and Defense decreased by 20%
+	}
+
+	RavagedRiptide: {
+		DisplayName: Ravaged Riptide
+		Description: Mods.TenebrousMod.Buffs.RavagedRiptide.Description
+	}
+
+	FeatherFanBuff: {
+		DisplayName: Feather Fan Buff
+		Description: Mods.TenebrousMod.Buffs.FeatherFanBuff.Description
+	}
+}
+
+Tiles: {
+	MainMenuThemeMusicBoxTile.MapEntry: Main Menu Theme Music Box
+	MainMenuThemeDayMusicBoxTile.MapEntry: Main Menu Theme Day Music Box Tile
+	MainMenuThemeNightMusicBoxTile.MapEntry: Main Menu Theme Night Music Box Tile
+	WarCrateTile.MapEntry: War Crate Tile
+	SecretMusicBoxOneTile.MapEntry: Secret Music Box One Tile
+	SecretMusicBoxFourTile.MapEntry: Secret Music Box Four Tile
+	SecretMusicBoxThreeTile.MapEntry: Secret Music Box Three Tile
+	SecretMusicBoxTwoTile.MapEntry: Secret Music Box Two Tile
+	IcerusMusicBoxTile.MapEntry: Icerus Music Box Tile
+}

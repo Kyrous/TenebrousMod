@@ -1,10 +1,11 @@
 ﻿using TenebrousMod.Items.Accessories;
 using TenebrousMod.Items.Food;
 using TenebrousMod.Items.Materials;
-using TenebrousMod.Items.Weapons.Mage;
-using TenebrousMod.Items.Weapons.Melee;
-using TenebrousMod.Items.Weapons.Ranger;
-using TenebrousMod.Items.Weapons.Summoner;
+using TenebrousMod.Items.Weapons.Corruption;
+using TenebrousMod.Items.Weapons.Crimson;
+using TenebrousMod.Items.Weapons.Granite;
+using TenebrousMod.Items.Weapons.Snow;
+using TenebrousMod.Items.Weapons.Underground;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
@@ -228,13 +229,13 @@ namespace TenebrousMod.Global.NPCs.Hostile
             }
             if (npc.type == NPCID.Harpy)
             {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ElementalShield>(), 50, 1, 1));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ElementalBreaker>(), 50, 1, 1));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<StarEssence>(), 2, 1, 1));
 
             }
             if (npc.type == NPCID.WyvernHead)
             {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ElementalShield>(), 50, 1, 1));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ElementalBreaker>(), 50, 1, 1));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<StarEssence>(), 2, 1, 1));
             }
         }

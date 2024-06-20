@@ -12,7 +12,7 @@ namespace TenebrousMod.Global
 
         public override void SetDefaults(NPC npc)
         {
-            npc.lifeMax = (int)Math.Round(1.1f * npc.lifeMax);
+            
         }
     }
 }

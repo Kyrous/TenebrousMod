@@ -32,6 +32,7 @@ namespace TenebrousMod.Items.TreasureBags
             itemLoot.Add(ItemDropRule.Common(ItemID.IronskinPotion, 1, 3, 3));
             itemLoot.Add(ItemDropRule.Common(ItemID.Apple, 1, 10, 10));
             itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<Meat>(), 1, 5, 5));
+            itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<BatteryJuice>(), 1, 5, 5));
             itemLoot.Add(ItemDropRule.Common(ItemID.WoodenCrate, 1, 3, 3));
             itemLoot.Add(ItemDropRule.Common(ItemID.Chest, 1, 3, 3));
         }
