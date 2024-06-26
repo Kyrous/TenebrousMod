@@ -118,10 +118,9 @@ namespace TenebrousMod.TenebrousModSystem
             base.Load();
         }
 
-        public override string DisplayName => "???THE LEGEND OF THE INFERNED MOON???";
+        public override string DisplayName => "???INFERNED MOON???";
 
         private float rotation;
-        /*
         public override bool PreDrawLogo(SpriteBatch spriteBatch, ref Vector2 logoDrawCenter, ref float logoRotation, ref float logoScale, ref Color drawColor)
         {
             drawColor = Color.White;
@@ -183,7 +182,7 @@ namespace TenebrousMod.TenebrousModSystem
                              0f);
 
             return true;
-        }*/
+        }
     }
 }
 

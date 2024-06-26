@@ -5,6 +5,7 @@ using TenebrousMod.Items.Weapons.Corruption;
 using TenebrousMod.Items.Weapons.Crimson;
 using TenebrousMod.Items.Weapons.Granite;
 using TenebrousMod.Items.Weapons.Snow;
+using TenebrousMod.Items.Weapons.Surface;
 using TenebrousMod.Items.Weapons.Underground;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
@@ -238,6 +239,11 @@ namespace TenebrousMod.Global.NPCs.Hostile
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ElementalBreaker>(), 50, 1, 1));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<StarEssence>(), 2, 1, 1));
             }
+            if (npc.type == NPCID.Wraith)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<WraithBlade>(), 50, 1, 1));
+            }
+
         }
     }
 }

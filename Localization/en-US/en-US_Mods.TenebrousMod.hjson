@@ -513,6 +513,11 @@ Items: {
 		DisplayName: Dominic's Horizon
 		Tooltip: Shoots Giant Ice Balls
 	}
+
+	WraithBlade: {
+		DisplayName: Wraith Blade
+		Tooltip: ""
+	}
 }
 
 Projectiles: {

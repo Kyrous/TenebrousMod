@@ -14,7 +14,7 @@ using Terraria.GameContent.ItemDropRules;
 using TenebrousMod.Items.Weapons.TheBehemoth;
 using Terraria.ModLoader.Utilities;
 
-namespace TenebrousMod.NPCs.Bosses.Icerus
+namespace TenebrousMod.NPCs.Bosses.TheBehemoth
 {
     [AutoloadBossHead]
     public class DesertBehemoth : ModNPC

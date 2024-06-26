@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
+using System;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
@@ -17,19 +18,21 @@ namespace TenebrousMod.Items.Weapons.Icerus
         {
 
             Item.DefaultToMagicWeapon(ModContent.ProjectileType<HorizonProj>(), 20, 15, true);
-            Item.mana = 20;
-            Item.damage = 42;
+            Item.mana = 25;
+            Item.damage = 64;
             Item.useTime = 10;
-            Item.reuseDelay = 60;
-            Item.rare = ItemRarityID.Pink;
+
+            Item.channel = true;
         }
 
-        public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
+
+
+        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
 
-            position = player.Center - new Vector2(Main.rand.Next(-50, 51), 600);
-            if (Main.LocalPlayer == player)
-                velocity = (Main.MouseWorld - position).SafeNormalize(Vector2.UnitY) * 20;
+            for (float i = 0; i < 3; i++)
+                Projectile.NewProjectile(source, position, velocity, type, damage, knockback, player.whoAmI, MathHelper.Lerp(MathHelper.TwoPi, 0f, i / 3f));
+            return false;
         }
 
     }
@@ -120,9 +123,9 @@ namespace TenebrousMod.Items.Weapons.Icerus
         public override void SetDefaults()
         {
             Projectile.width = Projectile.height = 48;
-            Projectile.tileCollide = true;
+            Projectile.tileCollide = false;
             Projectile.DamageType = DamageClass.Magic;
-            Projectile.penetrate = 1;
+            Projectile.penetrate = -1;
             Projectile.friendly = true;
             Projectile.usesLocalNPCImmunity = true;
             Projectile.timeLeft = 120;
@@ -142,32 +145,75 @@ namespace TenebrousMod.Items.Weapons.Icerus
 
 
 
-
             return false;
         }
-        public override void AI()
+
+
+
+        public override bool PreAI()
         {
 
-            Projectile.rotation += 1f;
+            Projectile.ai[0] += 0.16f;
 
 
 
-        }
 
-        public override void OnKill(int timeLeft)
-        {
-            for (int i = 0; i < 2; i++)
+            Player holder = Main.player[Projectile.owner];
+            Projectile.timeLeft = 2;
+            Projectile.velocity.Normalize();
+            holder.heldProj = Projectile.whoAmI;
+            Projectile.spriteDirection = holder.direction;
+            holder.itemAnimation = 2;
+            holder.itemTime = 2;
+            Projectile.rotation += 0.45f;
+
+
+            if (holder.channel)
+            {
+                if (Projectile.Center.X > holder.Center.X)
+                {
+                    holder.direction = 1;
+
+                }
+                else
+                {
+                    holder.direction = -1;
+                }
+
                 if (Main.myPlayer == Projectile.owner)
                 {
 
-                    Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.Center, Main.rand.NextVector2Circular(10, 2) + new Vector2(0, -10), ModContent.ProjectileType<miniIceProj>(), 42, 0, Projectile.owner);
+                    Projectile.position = (new Vector2(MathF.Sin(Projectile.ai[0]) * 125, MathF.Cos(Projectile.ai[0]) * 125) + Main.MouseWorld);
+                    Projectile.rotation = Projectile.Center.DirectionTo(Main.MouseWorld).ToRotation() + MathHelper.ToRadians(90);
 
                 }
+            }
+            else
+            {
+                Projectile.velocity = Projectile.DirectionTo(holder.Center) * 20;
+                if (Projectile.Distance(holder.Center) < 50)
+                {
+                    Projectile.Kill();
+                }
+
+            }
+
+
+
+
+            return false;
+        }
+
+
+        public override void OnKill(int timeLeft)
+        {
+
         }
     }
 
     public class miniIceProj : ModProjectile
     {
+
         public override void SetStaticDefaults()
         {
             ProjectileID.Sets.TrailCacheLength[Projectile.type] = 15;
@@ -214,7 +260,7 @@ namespace TenebrousMod.Items.Weapons.Icerus
             if (Projectile.timeLeft % 10 == 0 && Main.myPlayer == Projectile.owner)
             {
 
-                Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.Center, Vector2.Zero, ModContent.ProjectileType<horizonLingerProj>(), 25, 0, Projectile.owner);
+                Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.Center, Vector2.Zero, ModContent.ProjectileType<horizonLingerProj>(), Projectile.damage, 0, Projectile.owner);
 
 
             }

@@ -1,115 +1,141 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using TenebrousMod.Items.Summons;
 using TenebrousMod.NPCs.Bosses.Emberwing;
-using Terraria.GameContent.ItemDropRules;
+using TenebrousMod.NPCs.Bosses.Icerus;
+using TenebrousMod.NPCs.Bosses.TheBehemoth;
+using TenebrousMod.NPCs.Bosses.TheGreatHarpy;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace TenebrousMod.TenebrousModSystem
 {
-   // This class provides an example of advanced Boss Checklist integration utilizing the "GetBossInfoDictionary" Mod.Call that other Mods can copy into their mod's source code.
-   // If you are simply adding support for bosses in your mod to Boss Checklist, this is not what you want. Go read https://github.com/JavidPack/BossChecklist/wiki/Support-using-Mod-Call
-   // By copying this class into your mod, you can access Boss Checklist boss data reliably and with type safety without requiring a strong dependency.
-   public class BossChecklistIntegration : ModSystem
-   {
-       // Boss Checklist might add new features, so a version is passed into GetBossInfo. 
-       // If a new version of the GetBossInfo Call is implemented, find this class in the Boss Checklist Github once again and replace this version with the new version: https://github.com/JavidPack/BossChecklist/blob/master/BossChecklistIntegrationExample.cs
-       private static readonly Version BossChecklistAPIVersion = new Version(1, 6); // Do not change this yourself.
-
-       public class BossChecklistBossInfo
-       {
-           internal string key = ""; // unique identifier for an entry
-           internal string modSource = "";
-           internal LocalizedText displayName = null;
-
-           internal float progression = 0f; // See https://github.com/JavidPack/BossChecklist/blob/master/BossTracker.cs#L13 for vanilla boss values
-           internal Func<bool> downed = () => false;
-
-           internal bool isBoss = false;
-           internal bool isMiniboss = false;
-           internal bool isEvent = false;
-
-           internal List<int> npcIDs = new List<int>(); // Does not include minions, only npcids that count towards the NPC still being alive.
-           internal Func<LocalizedText> spawnInfo = null;
-           internal List<int> spawnItems = new List<int>();
-           internal int treasureBag = 0;
-           internal int relic = 0;
-           internal List<DropRateInfo> dropRateInfo = new List<DropRateInfo>();
-           internal List<int> loot = new List<int>();
-           internal List<int> collectibles = new List<int>();
-       }
-
-       public static Dictionary<string, BossChecklistBossInfo> bossInfos = new Dictionary<string, BossChecklistBossInfo>();
-
-       public static bool IntegrationSuccessful { get; private set; }
-
-       public override void PostAddRecipes() {
-           // For best results, this code is in PostAddRecipes
-           bossInfos.Clear();
-
-           if (ModLoader.TryGetMod("BossChecklist", out Mod bossChecklist) && bossChecklist.Version >= BossChecklistAPIVersion) {
-               object currentBossInfoResponse = bossChecklist.Call("GetBossInfoDictionary", Mod, BossChecklistAPIVersion.ToString());
-               if (currentBossInfoResponse is Dictionary<string, Dictionary<string, object>> bossInfoList) {
-                    bossChecklist.Call(
-                "LogBoss",
-                Mod,
-                nameof(Emberwing),
-                5.5f,
-                () => DownedBossSystem.downedMyBoss,
-                ModContent.NPCType<Emberwing>(),
-    new Dictionary<string, object>()
+    internal class BossChecklistIntegration : ModSystem
     {
-        ["spawnItems"] = ModContent.ItemType<EmberPact>(),
-        ["displayName"] = Language.GetText("Mods.TenebrousMod.BossChecklistIntegration.EntryName")
+        Mod bossChecklistMod;
+        public override void Load()
+        {
+        }
+        public override void PostSetupContent()
+        {
+            try
+            {
+                bossChecklistMod = ModLoader.GetMod("BossChecklist");
+                if (bossChecklistMod == null)
+                    return;
+
+                RegisterBoss<TheGreatHarpy>(2.1f, () => false);
+                RegisterBoss<DesertBehemoth>(7.1f, () => false);
+                RegisterBoss<IcerusBossHead>(12.1f, () => false, new List<int> { ModContent.ItemType<FrozenMoral>() }, () => Mod.GetLocalization("Mods.TenebrousMod.BossChecklistIntegration.Icerus.IcerusSpawnInfo"));
+                RegisterBoss<Emberwing>(12.1f, () => false, new List<int> { ModContent.ItemType<EmberPact>() }, () => Mod.GetLocalization("Mods.TenebrousMod.BossChecklistIntegration.Emberwing.EmberwingSpawnInfo"));
+
+            }
+            finally
+            {
+                // the instance is not really required for anything else 
+                // so it could just be set to null after all bosses have been registered
+                // this also prevents this mod from keeping boss checklist alive in case this mod doesn't unload
+                bossChecklistMod = null;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <inheritdoc cref="RegisterBoss"/>
+        void RegisterBoss<T>(float progression, Func<bool> downed, List<int> spawnItems = null, Func<LocalizedText> spawnInfo = null, List<int> collectibles = null, Func<bool> isAvailable = null, string internalName = null) where T : ModNPC
+        {
+            RegisterBoss(ModContent.NPCType<T>(), progression, downed, spawnItems, spawnInfo, isAvailable, collectibles, ModContent.GetInstance<T>().Name);
+        }
+        /*
+         * Boss priorities according to boss checklist's wiki https://github.com/JavidPack/BossChecklist/wiki/Boss-Progression-Values
+         * KingSlime = 1f;
+         * TorchGod = 1.5f;
+         * EyeOfCthulhu = 2f;
+         * BloodMoon = 2.5f;
+         * EaterOfWorlds = 3f;
+         * GoblinArmy = 3.33f;
+         * OldOnesArmy = 3.66f;
+         * DarkMage = 3.67f;
+         * QueenBee = 4f;
+         * Skeletron = 5f;
+         * DeerClops = 6f;
+         * WallOfFlesh = 7f;
+         * FrostLegion = 7.33f;
+         * PirateInvasion = 7.66f;
+         * PirateShip = 7.67f;
+         * QueenSlime = 8f;
+         * TheTwins = 9f;
+         * TheDestroyer = 10f;
+         * SkeletronPrime = 11f;
+         * Ogre = 11.01f;
+         * SolarEclipse = 11.5f;
+         * Plantera = 12f;
+         * Golem = 13f;
+         * PumpkinMoon = 13.25f;
+         * MourningWood = 13.26f;
+         * Pumpking = 13.27f;
+         * FrostMoon = 13.5f;
+         * Everscream = 13.51f;
+         * SantaNK1 = 13.52f;
+         * IceQueen = 13.53f;
+         * MartianMadness = 13.75f;
+         * MartianSaucer = 13.76f;
+         * DukeFishron = 14f;
+         * EmpressOfLight = 15f;
+         * Betsy = 16f;
+         * LunaticCultist = 17f;
+         * LunarEvent = 17.01f;
+         * Moonlord = 18f;
+         */
+
+        // https://github.com/JavidPack/BossChecklist/wiki/%5B1.4.4%5D-Boss-Log-Entry-Mod-Call
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="type"> The type of the boss.</param>
+        /// <param name="progression"> <see href="https://github.com/JavidPack/BossChecklist/wiki/Boss-Progression-Values"/>  </param>
+        /// <param name="downed"> A function that returns if the boss has been killed, usually just <c>()=>MySystem.DownedMyBoss</c>  </param>
+        /// <param name="spawnItems"> List of item types that spawn the boss </param>
+        /// <param name="spawnInfo"> A function that returns a LocalizedText for the boss' spawn info </param>
+        /// <param name="collectibles"> Masks, pets, relics and trophies, music boxes, etc. <seealso href="https://github.com/JavidPack/BossChecklist/wiki/%5B1.4.4%5D-Boss-Log-Entry-Mod-Call#collectibles"/>  </param>
+        /// <param name="isAvailable"> A function that indicates if a boss is visible on boss checklist's lists, if the function returns <see langword="false"/>, the boss is hidden.  </param>
+        /// <param name="internalName">The internal name for the boss checklist entry. <br />Will use the ModNPC's Name (class name) if <see langword="null"/></param>
+        void RegisterBoss(int type,
+            float progression,
+            Func<bool> downed,
+            List<int> spawnItems = null,
+            Func<LocalizedText> spawnInfo = null,
+            Func<bool> isAvailable = null,
+            List<int> collectibles = null,
+            string internalName = null)
+        {
+            if (bossChecklistMod == null)
+            {
+                return;
+            }
+
+            if (internalName == null)
+            {
+                if (NPCLoader.GetNPC(type)?.Name is not { } name)
+                {
+                    throw new InvalidOperationException("Possible attempt to register a vanilla npc on boss checklist? the Name or the ModNPC are null");
+                }
+                internalName = name;
+            }
+            Dictionary<string, object> extra = new();
+            if (spawnItems != null)
+                extra["spawnItems"] = extra;
+            if (collectibles != null)
+                extra["collectibles"] = collectibles;
+            if (isAvailable != null)
+                extra["availability"] = isAvailable;
+
+            bossChecklistMod.Call("LogBoss", Mod, internalName, progression, downed, new List<int>() { type }, extra);
+        }
+
     }
-);
-
-
-                    bossInfos = bossInfoList.ToDictionary(boss => boss.Key, boss => new BossChecklistBossInfo() {
-                       key = boss.Value.ContainsKey("key") ? boss.Value["key"] as string : "",
-                       modSource = boss.Value.ContainsKey("modSource") ? boss.Value["modSource"] as string : "",
-                       displayName = boss.Value.ContainsKey("displayName") ? boss.Value["displayName"] as LocalizedText : null,
-
-                       progression = boss.Value.ContainsKey("progression") ? Convert.ToSingle(boss.Value["progression"]) : 0f,
-                       downed = boss.Value.ContainsKey("downed") ? boss.Value["downed"] as Func<bool> : () => false,
-
-                       isBoss = boss.Value.ContainsKey("isBoss") ? Convert.ToBoolean(boss.Value["isBoss"]) : false,
-                       isMiniboss = boss.Value.ContainsKey("isMiniboss") ? Convert.ToBoolean(boss.Value["isMiniboss"]) : false,
-                       isEvent = boss.Value.ContainsKey("isEvent") ? Convert.ToBoolean(boss.Value["isEvent"]) : false,
-
-                       npcIDs = boss.Value.ContainsKey("npcIDs") ? boss.Value["npcIDs"] as List<int> : new List<int>(),
-                       spawnInfo = boss.Value.ContainsKey("spawnInfo") ? boss.Value["spawnInfo"] as Func<LocalizedText> : null,
-                       spawnItems = boss.Value.ContainsKey("spawnItems") ? boss.Value["spawnItems"] as List<int> : new List<int>(),
-                       treasureBag = boss.Value.ContainsKey("treasureBag") ? Convert.ToInt32(boss.Value["treasureBag"]) : 0,
-                       relic = boss.Value.ContainsKey("relic") ? Convert.ToInt32(boss.Value["relic"]) : 0,
-                       dropRateInfo = boss.Value.ContainsKey("dropRateInfo") ? boss.Value["dropRateInfo"] as List<DropRateInfo> : new List<DropRateInfo>(),
-                       loot = boss.Value.ContainsKey("loot") ? boss.Value["loot"] as List<int> : new List<int>(),
-                       collectibles = boss.Value.ContainsKey("collectibles") ? boss.Value["collectibles"] as List<int> : new List<int>(),
-                       
-
-                   });
-                   IntegrationSuccessful = true;
-
-               }
-           }
-
-       }
-
-       public override void Unload() {
-           bossInfos.Clear();
-       }
-
-       // This method shows an example of using the BossChecklistBossInfo data for something cool in your mod.
-       public static float DownedBossProgress() {
-           if (bossInfos.Count == 0) // bossInfos might be empty, if BossChecklist isn't present or something goes wrong.
-               return 0;
-
-           return (float)bossInfos.Count(x => x.Value.downed()) / bossInfos.Count();
-       }
-
-       // This utility method shows how you can easily check downed bosses from mods without worrying about the typical cross mod headaches like reflection, strong/weak references, and obtaining dll files to reference.
-       public static bool BossDowned(string bossKey) => bossInfos.TryGetValue(bossKey, out var bossInfo) ? bossInfo.downed() : false;
-   }
-}*/
+}
