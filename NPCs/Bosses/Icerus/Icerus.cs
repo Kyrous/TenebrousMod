@@ -34,8 +34,9 @@ namespace TenebrousMod.NPCs.Bosses.Icerus
             {
                 //npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberwingTrophyI>(), 10));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<DominicsLostBlade>(), 2));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<DominicsHorizon>(), 2));
             }
-            //npcLoot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<EmberwingRelicI>()));
+            npcLoot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<IcerusRelicI>()));
 
             //npcLoot.Add(ItemDropRule.MasterModeDropOnAllPlayers(ModContent.ItemType<MinionBossPetItem>(), 4));
             LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());

@@ -27,9 +27,9 @@ namespace TenebrousMod.TenebrousModSystem
                 if (bossChecklistMod == null)
                     return;
 
-                RegisterBoss<TheGreatHarpy>(2.1f, () => false);
-                RegisterBoss<DesertBehemoth>(7.1f, () => false);
-                RegisterBoss<IcerusBossHead>(12.1f, () => false, new List<int> { ModContent.ItemType<FrozenMoral>() }, () => Mod.GetLocalization("Mods.TenebrousMod.BossChecklistIntegration.Icerus.IcerusSpawnInfo"));
+                RegisterBoss<TheGreatHarpy>(1.6f, () => false, new List<int> { 0 }, () => Mod.GetLocalization("Mods.TenebrousMod.BossChecklistIntegration.TheGreatHarpy.TheGreatHarpySpawnInfo"));
+                RegisterBoss<DesertBehemoth>(7.1f, () => false, new List<int> { 0 }, () => Mod.GetLocalization("Mods.TenebrousMod.BossChecklistIntegration.TheBehemoth.TheBehemothSpawnInfo"));
+                RegisterBoss<IcerusBossHead>(7.2f, () => false, new List<int> { ModContent.ItemType<FrozenMoral>() }, () => Mod.GetLocalization("Mods.TenebrousMod.BossChecklistIntegration.Icerus.IcerusSpawnInfo"));
                 RegisterBoss<Emberwing>(12.1f, () => false, new List<int> { ModContent.ItemType<EmberPact>() }, () => Mod.GetLocalization("Mods.TenebrousMod.BossChecklistIntegration.Emberwing.EmberwingSpawnInfo"));
 
             }
