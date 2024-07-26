@@ -4,6 +4,7 @@ using ReLogic.Content;
 using System;
 using System.Linq;
 using TenebrousMod.Items.Bars;
+using TenebrousMod.Items.Placeable;
 using TenebrousMod.Items.Placeable.Furniture.Relic;
 using TenebrousMod.Items.Placeable.Furniture.Trophy;
 using TenebrousMod.Items.TreasureBags;
@@ -29,12 +30,15 @@ namespace TenebrousMod.NPCs.Bosses.Icerus
         }
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            //if (Main.expertMode) npcLoot.Add(ItemDropRule.BossBag(ModContent.ItemType<EmberwingTreasureBag>()));
+            if (Main.expertMode) npcLoot.Add(ItemDropRule.BossBag(ModContent.ItemType<IcerusTreasureBag>()));
             if (!Main.expertMode)
             {
                 //npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberwingTrophyI>(), 10));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<DominicsLostBlade>(), 2));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<DominicsHorizon>(), 2));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<IcerusMusicBox>(), 10));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxFive>(), 400));
+
             }
             npcLoot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<IcerusRelicI>()));
 
@@ -57,7 +61,7 @@ namespace TenebrousMod.NPCs.Bosses.Icerus
             NPC.lifeMax = 27000;
             NPC.boss = true;
             NPC.noGravity = true;
-
+            NPC.value = Item.buyPrice(0, 9);
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.npcSlots = 10f;

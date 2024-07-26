@@ -33,12 +33,11 @@ namespace TenebrousMod.Items.TreasureBags
         public override void ModifyItemLoot(ItemLoot itemLoot)
         {
             itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberwingTrophyI>(), 10));
-            itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberWarAxe>(), 1));
-            itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberScythe>(), 1));
+            itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberWarAxe>(), 2));
+            itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberScythe>(), 2));
             itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<TheGreatEmber>(), 2));
             itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<ObscurumBar>(), 1, 28, 40));
             itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<ObscurumGlove>(), 1));
-            itemLoot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<EmberwingRelicI>()));
         }
 
         public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)

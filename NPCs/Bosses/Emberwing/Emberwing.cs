@@ -44,7 +44,7 @@ namespace TenebrousMod.NPCs.Bosses.Emberwing
             NPC.noGravity = true;
             NPC.netAlways = true;
             NPC.noTileCollide = true;
-            NPC.value = Item.buyPrice(gold: 10);
+            NPC.value = Item.buyPrice(gold: 26);
             NPC.boss = true;
             NPC.npcSlots = 10f;
             NPC.aiStyle = -1;

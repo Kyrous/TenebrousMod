@@ -17,7 +17,7 @@ namespace TenebrousMod.Items.Weapons.Crimson
         public override void SetDefaults()
         {
             int projectile = ProjectileID.InfernoFriendlyBolt;
-            Item.damage = 3;
+            Item.damage = 5;
             Item.mana = 10;
             Item.DamageType = DamageClass.Magic;
             Item.width = 38;
@@ -36,8 +36,8 @@ namespace TenebrousMod.Items.Weapons.Crimson
             Item.shootSpeed = 3f;
             // TODO: recheck what was this logic supposed to do
             // 'projectile' is a type here, not a valid index
-            // Main.projectile[projectile].scale = 0.5f;
-            // Main.projectile[projectile].tileCollide = true;
+            Main.projectile[projectile].scale = 0.5f;
+            Main.projectile[projectile].tileCollide = true;
         }
     }
     //public class FriendlyBloodShot : ModProjectile

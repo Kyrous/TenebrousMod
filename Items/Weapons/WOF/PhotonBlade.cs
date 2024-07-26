@@ -115,7 +115,7 @@ namespace TenebrousMod.Items.Weapons.WOF
             Projectile.height = 24;
             Projectile.hostile = false;
             Projectile.friendly = true;
-            Projectile.tileCollide = false;
+            Projectile.tileCollide = true;
             Projectile.penetrate = 2;
         }
 

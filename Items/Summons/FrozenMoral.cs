@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria;
 using TenebrousMod.NPCs.Bosses.Icerus;
+using TenebrousMod.Items.Materials;
 
 namespace TenebrousMod.Items.Summons
 {
@@ -56,6 +57,12 @@ namespace TenebrousMod.Items.Summons
         public override void ModifyResearchSorting(ref ContentSamples.CreativeHelper.ItemGroup itemGroup)
         {
             itemGroup = ContentSamples.CreativeHelper.ItemGroup.BossItem;
+        }
+        public override void AddRecipes()
+        {
+            CreateRecipe().AddIngredient(ItemID.IceBlock, 10)
+                 .AddTile(TileID.DemonAltar)
+                 .Register();
         }
     }
 }

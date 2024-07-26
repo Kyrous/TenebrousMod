@@ -518,6 +518,31 @@ Items: {
 		DisplayName: Wraith Blade
 		Tooltip: ""
 	}
+
+	BladeOfTheEquinox: {
+		DisplayName: Blade Of The Equinox
+		Tooltip: Heals player by 10 when you hit an enemy on half health
+	}
+
+	TheBehemothRelicI: {
+		DisplayName: The Behemoth Relic I
+		Tooltip: ""
+	}
+
+	TheBehemothTreasureBag: {
+		DisplayName: The Behemoth Treasure Bag
+		Tooltip: ""
+	}
+
+	SecretMusicBoxFive: {
+		DisplayName: Secret Music Box Five
+		Tooltip: (Tenebrous Mod OST) Old Icerus Theme by Sagittarius
+	}
+
+	IcerusTreasureBag: {
+		DisplayName: Icerus Treasure Bag
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -552,11 +577,11 @@ Projectiles: {
 	BlunderbussProjectile.DisplayName: Blunderbuss
 	GlaveHeldProjectile.DisplayName: Glave Held
 	WizenedGlaveProjectile.DisplayName: Wizened Glave
-	Swordsmachine.DisplayName: Swordsmachine
 	horizonLingerProj.DisplayName: Lingering Horizon
 	HorizonProj.DisplayName: Horizon's Ice Shot
 	miniIceProj.DisplayName: Ice
-	iceSlash.DisplayName: ice Slash
+	iceSlash.DisplayName: Ice Slash
+	EquinoxSwing.DisplayName: Equinox Swing
 }
 
 NPCs: {
@@ -571,7 +596,6 @@ NPCs: {
 	IcerusBossHead.DisplayName: Icerus
 	IcerusBossTail.DisplayName: Icerus
 	DesertBehemoth.DisplayName: The Behemoth
-	Swordsman.DisplayName: Swordsman
 }
 
 Buffs: {
@@ -599,16 +623,22 @@ Buffs: {
 		DisplayName: Feather Fan Buff
 		Description: Mods.TenebrousMod.Buffs.FeatherFanBuff.Description
 	}
+
+	LittleStoneBuff: {
+		DisplayName: Little Stone Buff
+		Description: Mods.TenebrousMod.Buffs.LittleStoneBuff.Description
+	}
 }
 
 Tiles: {
 	MainMenuThemeMusicBoxTile.MapEntry: Main Menu Theme Music Box
-	MainMenuThemeDayMusicBoxTile.MapEntry: Main Menu Theme Day Music Box Tile
-	MainMenuThemeNightMusicBoxTile.MapEntry: Main Menu Theme Night Music Box Tile
-	WarCrateTile.MapEntry: War Crate Tile
-	SecretMusicBoxOneTile.MapEntry: Secret Music Box One Tile
-	SecretMusicBoxFourTile.MapEntry: Secret Music Box Four Tile
-	SecretMusicBoxThreeTile.MapEntry: Secret Music Box Three Tile
-	SecretMusicBoxTwoTile.MapEntry: Secret Music Box Two Tile
-	IcerusMusicBoxTile.MapEntry: Icerus Music Box Tile
+	MainMenuThemeDayMusicBoxTile.MapEntry: Main Menu Theme Day Music Box
+	MainMenuThemeNightMusicBoxTile.MapEntry: Main Menu Theme Night Music Box
+	WarCrateTile.MapEntry: War Crate
+	SecretMusicBoxOneTile.MapEntry: Secret Music Box One
+	SecretMusicBoxFourTile.MapEntry: Secret Music Box Four
+	SecretMusicBoxThreeTile.MapEntry: Secret Music Box Three
+	SecretMusicBoxTwoTile.MapEntry: Secret Music Box Two
+	IcerusMusicBoxTile.MapEntry: Icerus Music Box
+	SecretMusicBoxFiveTile.MapEntry: Secret Music Box Five
 }

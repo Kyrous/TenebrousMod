@@ -18,7 +18,7 @@ namespace TenebrousMod.Items.Weapons.Corruption
         }
         public override void SetDefaults()
         {
-            Item.damage = 9;
+            Item.damage = 3;
             Item.mana = 10;
             Item.DamageType = DamageClass.Magic;
             Item.width = 42;

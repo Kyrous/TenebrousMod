@@ -4,9 +4,38 @@ using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
 using System.IO;
+using TenebrousMod.Items.Weapons.Space;
 
 namespace TenebrousMod.Items.Weapons.Underground
 {
+    public class LittleStoneBuff : ModBuff
+    {
+        public override void SetStaticDefaults()
+        {
+            Main.buffNoSave[Type] = true;
+            Main.buffNoTimeDisplay[Type] = true;
+        }
+        public override void Update(Player player, ref int buffIndex)
+        {
+
+            if (player.ownedProjectileCounts[ModContent.ProjectileType<StoneProj>()] > 0)
+            {
+
+                player.buffTime[buffIndex] = 1800;
+
+            }
+            else
+            {
+                player.DelBuff(buffIndex);
+                buffIndex--;
+
+
+            }
+
+        }
+
+
+    }
     public class StaffOfTheStones : ModItem
     {
         public override void SetStaticDefaults()
@@ -21,7 +50,7 @@ namespace TenebrousMod.Items.Weapons.Underground
             Item.useStyle = ItemUseStyleID.Swing;
             Item.knockBack = 3;
             Item.DamageType = DamageClass.Summon;
-            // Item.buffType = ModContent.BuffType<ExampleSimpleMinionBuff>();
+            Item.buffType = ModContent.BuffType<LittleStoneBuff>();
             Item.shoot = ModContent.ProjectileType<StoneProj>();
             Item.damage = 13;
             Item.width = 30;
@@ -34,7 +63,10 @@ namespace TenebrousMod.Items.Weapons.Underground
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            player.AddBuff(Item.buffType, 2);
+            if (player.HasBuff(ModContent.BuffType<LittleStoneBuff>()))
+                return false;
+
+            player.AddBuff(ModContent.BuffType<LittleStoneBuff>(), 2);
 
             // TODO: is this multiplayer friendly?
             var projectile = Projectile.NewProjectileDirect(source, position, velocity, type, damage, knockback, player.whoAmI);
@@ -52,7 +84,6 @@ namespace TenebrousMod.Items.Weapons.Underground
             ProjectileID.Sets.MinionTargettingFeature[Projectile.type] = true;
 
             Main.projPet[Projectile.type] = true;
-
             ProjectileID.Sets.MinionSacrificable[Projectile.type] = true;
             ProjectileID.Sets.CultistIsResistantTo[Projectile.type] = true;
         }
@@ -82,6 +113,17 @@ namespace TenebrousMod.Items.Weapons.Underground
                     Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, velocity * 6, ProjectileID.NailFriendly, 9, 1, Projectile.owner);
                     attackTimer = 301;
                 }
+            }
+            Player player = Main.player[Projectile.owner];
+            if (player.dead || !player.active)
+            {
+                player.ClearBuff(ModContent.BuffType<LittleStoneBuff>());
+                return;
+            }
+
+            if (player.HasBuff(ModContent.BuffType<LittleStoneBuff>()))
+            {
+                Projectile.timeLeft = 2;
             }
         }
         private NPC GetClosestHostileNPC(Vector2 position, float maxDistance)

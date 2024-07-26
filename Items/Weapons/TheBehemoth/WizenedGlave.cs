@@ -12,6 +12,7 @@ namespace TenebrousMod.Items.Weapons.TheBehemoth
     {
         public override void SetDefaults()
         {
+            Item.rare = ItemRarityID.LightRed;
             Item.width = 80;
             Item.height = 96;
             Item.DamageType = DamageClass.Melee;

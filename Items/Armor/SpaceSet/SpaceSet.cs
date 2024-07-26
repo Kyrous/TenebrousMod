@@ -35,7 +35,7 @@ namespace TenebrousMod.Items.Armor.SpaceSet
         }
         public override void AddRecipes()
         {
-            CreateRecipe().AddIngredient(ItemID.Star, 20)
+            CreateRecipe().AddIngredient(ItemID.FallenStar, 20)
                 .AddIngredient(ModContent.ItemType<StarEssence>(), 1)
                  .AddTile(TileID.Anvils)
                  .Register();
@@ -82,7 +82,7 @@ namespace TenebrousMod.Items.Armor.SpaceSet
 
             public override void AddRecipes()
             {
-                CreateRecipe().AddIngredient(ItemID.Star, 15)
+                CreateRecipe().AddIngredient(ItemID.FallenStar, 15)
                      .AddIngredient(ModContent.ItemType<StarEssence>(), 1)
                      .AddTile(TileID.Anvils)
                      .Register();
@@ -131,7 +131,7 @@ namespace TenebrousMod.Items.Armor.SpaceSet
 
             public override void AddRecipes()
             {
-                CreateRecipe().AddIngredient(ItemID.Star, 15)
+                CreateRecipe().AddIngredient(ItemID.FallenStar, 15)
                      .AddIngredient(ModContent.ItemType<StarEssence>(), 1)
                      .AddTile(TileID.Anvils)
                      .Register();
@@ -180,7 +180,7 @@ namespace TenebrousMod.Items.Armor.SpaceSet
 
             public override void AddRecipes()
             {
-                CreateRecipe().AddIngredient(ItemID.Star, 15)
+                CreateRecipe().AddIngredient(ItemID.FallenStar, 15)
                      .AddIngredient(ModContent.ItemType<StarEssence>(), 1)
                      .AddTile(TileID.Anvils)
                      .Register();
@@ -229,7 +229,7 @@ namespace TenebrousMod.Items.Armor.SpaceSet
 
             public override void AddRecipes()
             {
-                CreateRecipe().AddIngredient(ItemID.Star, 15)
+                CreateRecipe().AddIngredient(ItemID.FallenStar, 15)
                      .AddIngredient(ModContent.ItemType<StarEssence>(), 1)
                      .AddTile(TileID.Anvils)
                      .Register();
@@ -264,7 +264,7 @@ namespace TenebrousMod.Items.Armor.SpaceSet
             }
             public override void AddRecipes()
             {
-                CreateRecipe().AddIngredient(ItemID.Star, 10)
+                CreateRecipe().AddIngredient(ItemID.FallenStar, 10)
                      .AddIngredient(ModContent.ItemType<StarEssence>(), 1)
                      .AddTile(TileID.Anvils)
                      .Register();

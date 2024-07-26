@@ -1,6 +1,7 @@
 ﻿using System;
 using TenebrousMod.BossBars;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace TenebrousMod.Global
@@ -12,7 +13,7 @@ namespace TenebrousMod.Global
 
         public override void SetDefaults(NPC npc)
         {
-            
+
         }
     }
 }

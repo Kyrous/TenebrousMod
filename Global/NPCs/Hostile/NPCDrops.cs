@@ -1,10 +1,12 @@
 ﻿using TenebrousMod.Items.Accessories;
 using TenebrousMod.Items.Food;
 using TenebrousMod.Items.Materials;
+using TenebrousMod.Items.Placeable;
 using TenebrousMod.Items.Weapons.Corruption;
 using TenebrousMod.Items.Weapons.Crimson;
 using TenebrousMod.Items.Weapons.Granite;
 using TenebrousMod.Items.Weapons.Snow;
+using TenebrousMod.Items.Weapons.Space;
 using TenebrousMod.Items.Weapons.Surface;
 using TenebrousMod.Items.Weapons.Underground;
 using Terraria;
@@ -20,38 +22,54 @@ namespace TenebrousMod.Global.NPCs.Hostile
         {
             if (npc.type == NPCID.DemonEye)
             {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxOne>(), 400));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Meat>(), 10, 1, 1));
             }
             if (npc.type == NPCID.DemonEye2)
             {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxOne>(), 400));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Meat>(), 10, 1, 1));
             }
             if (npc.type == NPCID.DemonEyeOwl)
             {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxOne>(), 400));
+
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Meat>(), 10, 1, 1));
             }
             if (npc.type == NPCID.DemonEyeSpaceship)
             {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxOne>(), 400));
+
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Meat>(), 10, 1, 1));
             }
             if (npc.type == NPCID.CataractEye)
             {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxOne>(), 400));
+
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Meat>(), 10, 1, 1));
             }
             if (npc.type == NPCID.CataractEye2)
             {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxOne>(), 400));
+
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Meat>(), 10, 1, 1));
             }
             if (npc.type == NPCID.DialatedEye)
             {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxOne>(), 400));
+
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Meat>(), 10, 1, 1));
             }
             if (npc.type == NPCID.DialatedEye2)
             {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxOne>(), 400));
+
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Meat>(), 10, 1, 1));
             }
             if (npc.type == NPCID.WanderingEye)
             {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxOne>(), 400));
+
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Meat>(), 10, 1, 1));
             }
             if (npc.type == NPCID.GraniteGolem && Main.hardMode)
@@ -60,41 +78,57 @@ namespace TenebrousMod.Global.NPCs.Hostile
             }
             if (npc.type == NPCID.GraniteGolem)
             {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxTwo>(), 400));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TheGreatGranite>(), 4, 1, 1));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<GraniteShard>(), 2, 1, 2));
             }
             if (npc.type == NPCID.GraniteFlyer)
             {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxTwo>(), 400));
+
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TheGreatGranite>(), 16, 1, 1));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<GraniteShard>(), 2, 1, 2));
             }
 
             if (npc.type == NPCID.IceSlime)
             {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxFive>(), 400));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<IceScepter>(), 100, 1, 1));
             }
             if (npc.type == NPCID.IceBat)
             {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxFive>(), 400));
+
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<IceScepter>(), 100, 1, 1));
             }
             if (npc.type == NPCID.IceTortoise)
             {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxFive>(), 400));
+
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<IceScepter>(), 25, 1, 1));
             }
             if (npc.type == NPCID.IceElemental)
             {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxFive>(), 400));
+
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<IceScepter>(), 2, 1, 1));
             }
             if (npc.type == NPCID.SpikedIceSlime)
             {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxFive>(), 400));
+
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<IceScepter>(), 100, 1, 1));
             }
             if (npc.type == NPCID.ArmedZombieEskimo)
             {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxFive>(), 400));
+
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<IceScepter>(), 75, 1, 1));
             }
             if (npc.type == NPCID.ZombieEskimo)
             {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxFive>(), 400));
+
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<IceScepter>(), 100, 1, 1));
             }
             if (npc.type == NPCID.Crimslime)
@@ -232,6 +266,10 @@ namespace TenebrousMod.Global.NPCs.Hostile
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ElementalBreaker>(), 50, 1, 1));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<StarEssence>(), 2, 1, 1));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<WingedYoyo>(), 25, 1, 1));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<WingedJavelin>(), 25, 1, 1));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<FeatherFan>(), 25, 1, 1));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<FeatherStorm>(), 25, 1, 1));
 
             }
             if (npc.type == NPCID.WyvernHead)
@@ -242,8 +280,30 @@ namespace TenebrousMod.Global.NPCs.Hostile
             if (npc.type == NPCID.Wraith)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<WraithBlade>(), 50, 1, 1));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxThree>(), 400));
+
+            }
+            if (npc.type == NPCID.PossessedArmor)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxThree>(), 400));
             }
 
+            if (npc.type == NPCID.ZombieMushroom)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxFour>(), 400));
+            }
+            if (npc.type == NPCID.SporeSkeleton)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxFour>(), 400));
+            }
+            if (npc.type == NPCID.FungiBulb)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxFour>(), 400));
+            }
+            if (npc.type == NPCID.AnomuraFungus)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxFour>(), 400));
+            }
         }
     }
 }

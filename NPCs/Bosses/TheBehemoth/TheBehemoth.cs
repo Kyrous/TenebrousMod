@@ -13,6 +13,8 @@ using TenebrousMod.Items.Weapons.Icerus;
 using Terraria.GameContent.ItemDropRules;
 using TenebrousMod.Items.Weapons.TheBehemoth;
 using Terraria.ModLoader.Utilities;
+using TenebrousMod.Items.TreasureBags;
+using TenebrousMod.Items.Placeable.Furniture.Relic;
 
 namespace TenebrousMod.NPCs.Bosses.TheBehemoth
 {
@@ -38,7 +40,7 @@ namespace TenebrousMod.NPCs.Bosses.TheBehemoth
             NPC.lifeMax = 9000;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
-            NPC.value = Item.buyPrice(gold: 5);
+            NPC.value = Item.buyPrice(gold: 7);
             AnimationType = NPCID.SandShark;
             NPC.boss = true;
             NPC.aiStyle = -1;
@@ -62,14 +64,14 @@ namespace TenebrousMod.NPCs.Bosses.TheBehemoth
         }
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            //if (Main.expertMode) npcLoot.Add(ItemDropRule.BossBag(ModContent.ItemType<EmberwingTreasureBag>()));
+            if (Main.expertMode) npcLoot.Add(ItemDropRule.BossBag(ModContent.ItemType<TheBehemothTreasureBag>()));
             if (!Main.expertMode)
             {
                 //npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EmberwingTrophyI>(), 10));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<BlunderBuss>(), 2));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<WizenedGlave>(), 2));
             }
-            //npcLoot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<EmberwingRelicI>()));
+            npcLoot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<TheBehemothRelicI>()));
 
             //npcLoot.Add(ItemDropRule.MasterModeDropOnAllPlayers(ModContent.ItemType<MinionBossPetItem>(), 4));
             LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());

@@ -47,8 +47,8 @@ namespace TenebrousMod.Items.Placeable
             itemLoot.Add(ItemDropRule.Common(ItemID.ManaPotion, 1, 1, 5));
             if(NPC.downedPlantBoss)
             {
-                itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<HydroFury>(), 2, 1, 1));
-                itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<HydroArrow>(), 1, 400 ,800));
+                itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<HydroFury>(), 10, 1, 1));
+                itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<HydroArrow>(), 2, 40, 400));
             }
         }
     }
