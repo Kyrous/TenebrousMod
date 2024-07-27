@@ -1,7 +1,12 @@
 Credits in the Mod Discord:
-https://discord.gg/xZ6AU89Ztx
+https://discord.gg/nvEwvB8CZA
 
-This Mod is on beta and is not fully yet done. (There are some placeholder stuff like sprites and ai)
+Boss summon stuff:
+1. The Behemoth spawns in the desert randomly after beating WoF
+2. Icerus is summoned by Frozen Moral which is made from 10 blocks of ice and can only be summoned after WoF. It is crafted using a demon alter.
+3. Emberwing is summoned by Ember Pact which is made from 1 granite shard, 10 hellstone bars, 25 obsidian, 1 fireblossom, and 25 ash blocks. It is crafted using a demon alter.
+
+This Mod is on beta and is not fully yet done. (There is some placeholder stuff and more to add)
 On version v0.6... We should all expect it to be ready for playthroughs.
 Also bugs and suggestions would be really helpful!
 
@@ -24,16 +29,12 @@ This is where you will come in and stop Sinorus's tyranny.
 There will be more content added for the story later on in the mod... Not all the lore will be publically released at first.
 
 Content:
-2 Boss(s)
-4 Enemie(s)
+3 Boss(s)
+2 Enemie(s)
 1 Critter(s)
-4 Buff(s)
-8 Tile(s)
-59 item(s)
+6 Buff(s)
+13 Tile(s)
+88 item(s)
 
 Localization:
-English
-Spanish
-Portuguese
-French
-Russian
+English Only
