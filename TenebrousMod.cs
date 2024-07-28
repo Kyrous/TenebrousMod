@@ -8,11 +8,19 @@ using TenebrousMod.Items.Consumables;
 using TenebrousMod.Items.Placeable;
 using Terraria.DataStructures;
 using Microsoft.Xna.Framework;
+using Terraria.Graphics.Effects;
+using Terraria.Graphics.Shaders;
+using Terraria.ID;
+using Terraria.GameContent.Ambience;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Build.Tasks.Deployment.ManifestUtilities;
+
 
 namespace TenebrousMod
 {
     public class TenebrousMod : Mod
     {
+        public static bool TheWorldIsOver = false;
         internal Mod bossChecklist = null;
         internal static TenebrousMod Instance;
         #region Load
@@ -21,7 +29,9 @@ namespace TenebrousMod
             Instance = this;
             bossChecklist = null;
             ModLoader.TryGetMod("BossChecklist", out bossChecklist);
+
         }
+
         #endregion
         #region Unload
         public override void Unload()

@@ -26,6 +26,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Items\Placeable\WarCrateTile.png" />
+    <None Remove="Items\Weapons\Emberwing\EmberFlame.png" />
     <None Remove="Localization\en-US\en-US_Mods.TenebrousMod.BossChecklistIntegration.hjson" />
     <None Remove="Localization\fr-FR_Mods.TenebrousMod.hjson" />
     <None Remove="Localization\ru-RU_Mods.TenebrousMod.hjson" />

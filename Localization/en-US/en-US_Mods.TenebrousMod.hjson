@@ -543,6 +543,11 @@ Items: {
 		DisplayName: Icerus Treasure Bag
 		Tooltip: ""
 	}
+
+	MarbleTeleporter: {
+		DisplayName: Marble Teleporter
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -582,6 +587,7 @@ Projectiles: {
 	miniIceProj.DisplayName: Ice
 	iceSlash.DisplayName: Ice Slash
 	EquinoxSwing.DisplayName: Equinox Swing
+	EmberFlameWarAxe.DisplayName: Ember Flame War Axe
 }
 
 NPCs: {
