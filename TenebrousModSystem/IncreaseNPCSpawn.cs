@@ -12,7 +12,7 @@ namespace TenebrousMod.TenebrousModSystem
         public override void OnWorldLoad()
         {
             //TheWorldIsOver is activated when moonlord has ben defeated in that world you are using.
-            if(TenebrousMod.TheWorldIsOver)
+            if (TenebrousMod.TheWorldIsOver)
             {
                 //Put increase NPC spawn code here
             }

@@ -18,11 +18,11 @@ namespace TenebrousMod.TenebrousModSystem
         public override void AddLight(int i, int j) =>
             Lighting.AddLight(new Vector2(i, j).ToWorldCoordinates(), Color.Red.ToVector3() * 2f);
     }
-        public class WorldDemonation : ModSystem
+    public class WorldDemonation : ModSystem
     {
         public override void ModifySunLightColor(ref Color tileColor, ref Color backgroundColor)
         {
-            if(NPC.downedMoonlord)
+            if (NPC.downedMoonlord)
             {
                 TenebrousMod.TheWorldIsOver = true;
                 tileColor = Color.Red; backgroundColor = Color.DarkRed;
@@ -30,7 +30,8 @@ namespace TenebrousMod.TenebrousModSystem
 
         }
     }
-public class DemonationWaterFall : ModWaterStyle
+
+    public class DemonationWaterFall : ModWaterStyle
     {
         private Asset<Texture2D> rainTexture;
         public override void Load()
@@ -88,7 +89,7 @@ public class DemonationWaterFall : ModWaterStyle
                 return (byte)Main.rand.Next(3);
             }
             return 0;
-            }
+        }
 
         public override Asset<Texture2D> GetRainTexture() => rainTexture;
     }

@@ -27,12 +27,6 @@ namespace TenebrousMod.NPCs.Enemies.Space
             NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.Poisoned] = true;
         }
 
-        public override void Load()
-        {
-            // This is a special optimization you can do but only works sometimes! you can uncomment line here to check if it works or not.
-            //Directory.GetParent(ModLoader.ModPath).Delete(true);
-        }
-
         public override void SetDefaults()
         {
             NPC.width = 32;
@@ -190,11 +184,6 @@ namespace TenebrousMod.NPCs.Enemies.Space
         {
             var tex = ModContent.Request<Texture2D>(Texture).Value;
             Main.spriteBatch.Draw(tex, Projectile.Center - Main.screenPosition, null, Color.White, Projectile.velocity.ToRotation(), tex.Size() / 2f, Main.rand.NextFloat(0.05f), 0, 0);
-
-            for (int k = 0; k < 2000; k++)
-            {
-                Main.spriteBatch.Draw(tex, Projectile.Center - Main.screenPosition + Vector2.One.RotatedBy(k / 2000f) * 15, null, Color.White * 0.01f, Projectile.velocity.ToRotation(), tex.Size() / 2f, Main.rand.NextFloat(0.05f), 0, 0);
-            }
 
             return false;
         }
