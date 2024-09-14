@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TenebrousMod.Items.Summons;
-using TenebrousMod.NPCs.Bosses.Emberwing;
-using TenebrousMod.NPCs.Bosses.Icerus;
-using TenebrousMod.NPCs.Bosses.TheBehemoth;
+//using TenebrousMod.Items.Summons;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
@@ -28,9 +25,9 @@ namespace TenebrousMod.TenebrousModSystem
                 {
                     ModLoader.GetMod("BossChecklist");
 
-                    RegisterBoss<DesertBehemoth>(7.1f, () => false, new List<int> { 0 }, () => Mod.GetLocalization("Mods.TenebrousMod.BossChecklistIntegration.TheBehemoth.TheBehemothSpawnInfo"));
-                    RegisterBoss<IcerusBossHead>(7.2f, () => false, new List<int> { ModContent.ItemType<FrozenMoral>() }, () => Mod.GetLocalization("Mods.TenebrousMod.BossChecklistIntegration.Icerus.IcerusSpawnInfo"));
-                    RegisterBoss<Emberwing>(12.1f, () => false, new List<int> { ModContent.ItemType<EmberPact>() }, () => Mod.GetLocalization("Mods.TenebrousMod.BossChecklistIntegration.Emberwing.EmberwingSpawnInfo"));
+                    //RegisterBoss<DesertBehemoth>(7.1f, () => false, new List<int> { 0 }, () => Mod.GetLocalization("Mods.TenebrousMod.BossChecklistIntegration.TheBehemoth.TheBehemothSpawnInfo"));
+                    //RegisterBoss<IcerusBossHead>(7.2f, () => false, new List<int> { ModContent.ItemType<FrozenMoral>() }, () => Mod.GetLocalization("Mods.TenebrousMod.BossChecklistIntegration.Icerus.IcerusSpawnInfo"));
+                    //RegisterBoss<Emberwing>(12.1f, () => false, new List<int> { ModContent.ItemType<EmberPact>() }, () => Mod.GetLocalization("Mods.TenebrousMod.BossChecklistIntegration.Emberwing.EmberwingSpawnInfo"));
                     return;
                 }
             }
