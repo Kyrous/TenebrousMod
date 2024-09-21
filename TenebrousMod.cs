@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
-using TenebrousMod.Items.TreasureBags;
+//using TenebrousMod.Items.TreasureBags;
 using System.IO;
 using Terraria.ModLoader.IO;
-using TenebrousMod.Items.Consumables;
-using TenebrousMod.Items.Placeable;
+//using TenebrousMod.Items.Consumables;
+//using TenebrousMod.Items.Placeable;
 using Terraria.DataStructures;
 using Microsoft.Xna.Framework;
 using Terraria.Graphics.Effects;
@@ -36,10 +36,12 @@ namespace TenebrousMod
     }
     public class TenebrousModPlayer : ModPlayer
     {
+        /*
         public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
         {
             yield return new Item(ModContent.ItemType<StarterBag>(), 1);
         }
+        */
         public override void CatchFish(FishingAttempt attempt, ref int itemDrop, ref int npcSpawn, ref AdvancedPopupRequest sonar, ref Vector2 sonarPosition)
         {
             bool inWater = !attempt.inLava && !attempt.inHoney;
@@ -48,7 +50,7 @@ namespace TenebrousMod
 
             if (inWater && Main.rand.NextBool(yourChanceDenominator))
             {
-                itemDrop = ModContent.ItemType<WarCrate>();
+                //itemDrop = ModContent.ItemType<WarCrate>();
                 return;
 
             }
@@ -73,6 +75,7 @@ namespace TenebrousMod
         public int LifeFruits;
         public int ManaCrystals;
 
+        /*
         public override void ModifyMaxStats(out StatModifier health, out StatModifier mana)
         {
             health = StatModifier.Default;
@@ -80,6 +83,7 @@ namespace TenebrousMod
             mana = StatModifier.Default;
             mana.Base = ManaCrystals * RavagedHeart.Mana;
         }
+        */
 
         public override void SyncPlayer(int toWho, int fromWho, bool newPlayer)
         {

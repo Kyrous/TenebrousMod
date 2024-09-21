@@ -1,14 +1,14 @@
-﻿using TenebrousMod.Items.Accessories;
-using TenebrousMod.Items.Food;
-using TenebrousMod.Items.Materials;
-using TenebrousMod.Items.Placeable;
-using TenebrousMod.Items.Weapons.Corruption;
-using TenebrousMod.Items.Weapons.Crimson;
-using TenebrousMod.Items.Weapons.Granite;
-using TenebrousMod.Items.Weapons.Snow;
-using TenebrousMod.Items.Weapons.Space;
-using TenebrousMod.Items.Weapons.Surface;
-using TenebrousMod.Items.Weapons.Underground;
+﻿//using TenebrousMod.Items.Accessories;
+//using TenebrousMod.Items.Food;
+//using TenebrousMod.Items.Materials;
+//using TenebrousMod.Items.Placeable;
+//using TenebrousMod.Items.Weapons.Corruption;
+//using TenebrousMod.Items.Weapons.Crimson;
+// TenebrousMod.Items.Weapons.Granite;
+//using TenebrousMod.Items.Weapons.Snow;
+//using TenebrousMod.Items.Weapons.Space;
+//using TenebrousMod.Items.Weapons.Surface;
+//using TenebrousMod.Items.Weapons.Underground;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
@@ -20,6 +20,7 @@ namespace TenebrousMod.Global.NPCs.Hostile
     {
         public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot)
         {
+            /*
             if (npc.type == NPCID.DemonEye)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxOne>(), 400));
@@ -304,6 +305,7 @@ namespace TenebrousMod.Global.NPCs.Hostile
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SecretMusicBoxFour>(), 400));
             }
+            */
         }
     }
 }

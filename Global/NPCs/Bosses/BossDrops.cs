@@ -1,7 +1,7 @@
-﻿using TenebrousMod.Items.Weapons.EOC;
-using TenebrousMod.Items.Weapons.Emberwing;
-using TenebrousMod.Items.Weapons.Skeletron;
-using TenebrousMod.Items.Weapons.WOF;
+﻿//using TenebrousMod.Items.Weapons.EOC;
+//using TenebrousMod.Items.Weapons.Emberwing;
+//using TenebrousMod.Items.Weapons.Skeletron;
+//using TenebrousMod.Items.Weapons.WOF;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
@@ -13,6 +13,7 @@ namespace TenebrousMod.Global.NPCs.Bosses
     {
         public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot)
         {
+            /*
             if (npc.type == NPCID.WallofFlesh)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<PhotonBlade>(), 2, 1, 1));
@@ -25,7 +26,7 @@ namespace TenebrousMod.Global.NPCs.Bosses
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Eyesore>(), 2, 1, 1));
             }
-
+            */
             base.ModifyNPCLoot(npc, npcLoot);
         }
     }

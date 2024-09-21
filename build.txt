@@ -4,3 +4,4 @@ version = 0.5.6
 hideCode = true
 hideResources = true
 includeSource = false
+modReferences = SubworldLibrary

@@ -12,4 +12,10 @@
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
   </ItemGroup>
 	
+  <ItemGroup>
+    <Reference Include="SubworldLibrary">
+      <HintPath>..\..\..\Desktop\SubworldLibraryFiles\SubworldLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+	
 </Project>
