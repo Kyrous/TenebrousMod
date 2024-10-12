@@ -8,6 +8,10 @@ using Terraria.IO;
 using Terraria.WorldBuilding;
 using Terraria;
 
+/*
+ * This is where Layer1's world gen will be.
+*/
+
 namespace TenebrousMod.TWorldGen.Subworlds
 {
     public class Layer1GenPass : GenPass
