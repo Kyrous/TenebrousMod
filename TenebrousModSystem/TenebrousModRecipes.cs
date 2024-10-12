@@ -3,6 +3,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using TenebrousMod.Items;
+using TenebrousMod.Content.Items;
 
 namespace TenebrousMod.TenebrousModSystem
 {
@@ -21,8 +22,6 @@ namespace TenebrousMod.TenebrousModSystem
             // and with this you get a recipe for Item1 that cost 10 dirt and requires being near any workbench
             */
 
-            
-            // Here are some recipes for the harpy stuff (that refuse to work bcuz harpy folder doesnt exist??)
             var FeatherFan = ModContent.GetInstance<Items.Weapons.Space.FeatherFan>();
 
             FeatherFan.CreateRecipe()
@@ -40,7 +39,20 @@ namespace TenebrousMod.TenebrousModSystem
             WingedJavelin.CreateRecipe()
                 .AddIngredient(ItemID.Feather, 5)
                 .Register();
-            
+
+            var BronzeIngot = ModContent.GetInstance<Items.Materials.BronzeIngot>();
+
+            BronzeIngot.CreateRecipe()
+                .AddIngredient(ItemID.CopperOre, 5)
+                .AddIngredient(ItemID.TinOre, 5)
+                .AddTile(TileID.SkyMill)
+                .Register();
+
+            var Layer1Warp = ModContent.GetInstance<Items.Warp.Layer1Warp>();
+
+            Layer1Warp.CreateRecipe()
+                .AddIngredient<BronzeIngot>(10)
+                .Register();
         }
     }
 }
