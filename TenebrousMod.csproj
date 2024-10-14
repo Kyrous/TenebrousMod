@@ -14,7 +14,7 @@
 	
   <ItemGroup>
     <Reference Include="SubworldLibrary">
-      <HintPath>..\..\..\Desktop\SubworldLibraryFiles\SubworldLibrary.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Downloads\SubworldLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
 	

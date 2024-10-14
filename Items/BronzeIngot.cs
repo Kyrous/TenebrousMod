@@ -1,10 +1,9 @@
-using TenebrousMod.Content.Items;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace TenebrousMod.Content.Items
+namespace TenebrousMod.Items
 {
     public class BronzeIngot : ModItem
     {

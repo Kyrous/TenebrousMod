@@ -7,6 +7,7 @@ using Terraria.ID;
 using Terraria.IO;
 using Terraria.WorldBuilding;
 using Terraria;
+using SubworldLibrary;
 
 /*
  * This is where Layer1's world gen will be.

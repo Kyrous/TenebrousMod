@@ -3,7 +3,6 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using TenebrousMod.Items;
-using TenebrousMod.Content.Items;
 
 namespace TenebrousMod.TenebrousModSystem
 {
@@ -40,7 +39,7 @@ namespace TenebrousMod.TenebrousModSystem
                 .AddIngredient(ItemID.Feather, 5)
                 .Register();
 
-            var BronzeIngot = ModContent.GetInstance<Items.Materials.BronzeIngot>();
+            var BronzeIngot = ModContent.GetInstance<Items.BronzeIngot>();
 
             BronzeIngot.CreateRecipe()
                 .AddIngredient(ItemID.CopperOre, 5)

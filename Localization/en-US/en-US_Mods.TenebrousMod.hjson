@@ -548,6 +548,21 @@ Items: {
 		DisplayName: Marble Teleporter
 		Tooltip: ""
 	}
+
+	BronzeIngot: {
+		DisplayName: Bronze Ingot
+		Tooltip: ""
+	}
+
+	Layer1Warp: {
+		DisplayName: Layer1 Warp
+		Tooltip: Left click to go there, right click to return to main world.
+	}
+
+	HarpyGlaive: {
+		DisplayName: Harpy Glaive
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -588,6 +603,8 @@ Projectiles: {
 	iceSlash.DisplayName: Ice Slash
 	EquinoxSwing.DisplayName: Equinox Swing
 	EmberFlameWarAxe.DisplayName: Ember Flame War Axe
+	HarpyFeather.DisplayName: Harpy Feather
+	HarpyGlaiveProj.DisplayName: Harpy Glaive Proj
 }
 
 NPCs: {
@@ -602,6 +619,7 @@ NPCs: {
 	IcerusBossHead.DisplayName: Icerus
 	IcerusBossTail.DisplayName: Icerus
 	DesertBehemoth.DisplayName: The Behemoth
+	placeholder1.DisplayName: placeholder1
 }
 
 Buffs: {
