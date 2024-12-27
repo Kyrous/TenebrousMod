@@ -551,7 +551,12 @@ Items: {
 
 	BronzeIngot: {
 		DisplayName: Bronze Ingot
-		Tooltip: ""
+		Tooltip: 
+			'''
+			A sturdy alloy created from copper and tin,
+			or at least thats what you know from various harpy documents.
+			You find that taking theirs is a lot easier than learning how to make it.
+			'''
 	}
 
 	Layer1Warp: {
